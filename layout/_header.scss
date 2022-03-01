@@ -1,0 +1,16 @@
+/* en-têtes de pages*/
+/*ma police d'écriture*/
+$font-fam_titles: 'Shrikhand', cursive;
+
+header {
+      margin: 0 auto;
+}
+
+h1 {
+      font-family: $font-fam_titles;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-content: center;
+      
+}

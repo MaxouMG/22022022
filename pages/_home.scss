@@ -1,0 +1,134 @@
+/*mes couleurs*/
+$greyaround: #C1C1C3;
+$greybground: #E0E0E0;
+$primary: #9356DC;
+
+/*Ma page d'accueil  hors en tête*/
+      /* mobile first*/
+
+
+.button {
+      box-shadow: 0px 5px 0px $greyaround;
+      transition: 1s;
+      height: 35px;
+      border-radius: 25px;
+      border: 1px solid $greybground;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 25px 0px;
+            &:hover{
+                  background: lighten($primary, 20%);
+                  box-shadow: 20px 15px 2px 0px $greyaround;                  
+            }
+}
+
+
+
+
+body {
+      min-width: 250px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      list-style-type: none;
+      margin: 0 auto;
+}
+
+.reserve {
+      background-color: $greybground;
+}
+
+#aroundme {
+      display: flex;
+      justify-content: center;
+      background-color: $greyaround;
+      padding-top: 10px;
+      padding-bottom: 10px;      
+}
+
+.fas.fa-map-marker-alt{   
+      margin-left: 0;
+      margin-right: 0;  
+}
+
+::placeholder{
+      color: #000;
+}
+
+#city {
+      text-align: center;
+      border: none;
+      background-color: $greyaround;
+      margin-left: 0;
+      margin-right: 0;
+}
+
+h2 {
+      text-align: center;
+      padding: 10px 25px 10px 10px;
+}
+
+#explore1 {
+      background-color: $greybground;
+      text-align: center;
+      padding: 10px 25px 25px 10px;
+      .explore2 {
+            background-color: $primary;
+      /*cette background-color en dégradé est à retravailler plus tard*/
+            color:#fff;
+            @extend .button;
+      }
+}
+
+aside {
+      background-color: $greybground;
+      color: #000;
+      
+}
+
+
+
+
+
+
+
+
+
+      
+      /*Premier breakpoint à la largeur du logo et du formulaire*/
+      /*ma version tablette au lieu de 768 px*/
+      @media screen and (min-width: 505px) {
+            .reserve {                  
+                  border-top-right-radius: 20px;
+                  border-top-left-radius: 20px;                 
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
+            }
+
+            #aroundme {
+                  border-top-right-radius: 20px;
+                  border-top-left-radius: 20px;
+            }
+            #explore1 {
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
+            }
+      
+}
+
+
+
+
+
+
+
+
+
+
+      /* ma version desktop*/            
+            @media screen and (min-width: 992px) {
+                  .reserve {
+                        background-color: #fff;
+                  }
+            }
