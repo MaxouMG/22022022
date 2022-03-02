@@ -1,27 +1,27 @@
 @charset "UTF-8";
 /*Ceci regroupe les sous-dossiers de -layout et de -pages */
 /*mes couleurs*/
-/*Ma page d'accueil  hors en tête*/
-/* mobile first*/
-.button, #explore1 .explore2 {
+/*extensions*/
+.button, #explore1 .explore2, .choose, .compose, .in_situ {
   -webkit-box-shadow: 0px 5px 0px #C1C1C3;
           box-shadow: 0px 5px 0px #C1C1C3;
-  -webkit-transition: 1s;
-  transition: 1s;
-  height: 35px;
+  -webkit-transition: 1000ms;
+  transition: 1000ms;
   border-radius: 25px;
   border: 1px solid #E0E0E0;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 25px 0px;
 }
 
-.button:hover, #explore1 .explore2:hover {
-  background: #c9abee;
+.button:hover, #explore1 .explore2:hover, .choose:hover, .compose:hover, .in_situ:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-filter: opacity(70%);
+          filter: opacity(70%);
   -webkit-box-shadow: 20px 15px 2px 0px #C1C1C3;
           box-shadow: 20px 15px 2px 0px #C1C1C3;
 }
 
+/*Ma page d'accueil  hors en tête*/
+/* mobile first*/
 body {
   min-width: 250px;
   -webkit-box-sizing: border-box;
@@ -38,6 +38,7 @@ body {
   margin: 0 auto;
 }
 
+/*première section - réserver le menu*/
 .reserve {
   background-color: #E0E0E0;
 }
@@ -95,18 +96,48 @@ h2 {
 }
 
 #explore1 .explore2 {
-  background-color: #9356DC;
-  /*cette background-color en dégradé est à retravailler plus tard*/
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(50%), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, 50%, #9356DC);
   color: #fff;
+  height: 40px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 25px 0px;
 }
 
+/*Partie main, sous-partie aside et ensemble container_choice*/
 aside {
-  background-color: #E0E0E0;
   color: #000;
 }
 
+aside h2 {
+  text-align: left;
+}
+
+.container_choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.choose, .compose, .in_situ {
+  width: 300px;
+  height: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.choose:hover, .compose:hover, .in_situ:hover {
+  background: #ffc6ef;
+}
+
 /*Premier breakpoint à la largeur du logo et du formulaire*/
-/*ma version tablette au lieu de 768 px*/
 @media screen and (min-width: 505px) {
   .reserve {
     border-top-right-radius: 20px;
@@ -121,6 +152,28 @@ aside {
   #explore1 {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+  }
+}
+
+/*version tablette*/
+@media screen and (min-width: 768px) {
+  .reserve {
+    background-color: #fff;
+  }
+  aside h2 {
+    text-align: center;
+  }
+  .container_choice {
+    max-width: 895px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
