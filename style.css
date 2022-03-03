@@ -124,17 +124,57 @@ aside h2 {
           flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
 .choose, .compose, .in_situ {
   width: 300px;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding: 20px;
+  /* padding-bottom: 20px;
+      padding-right: 40px;
+      padding-left: 40px;*/
 }
 
 .choose:hover, .compose:hover, .in_situ:hover {
   background: #ffc6ef;
+}
+
+.choose h3, .compose h3, .in_situ h3 {
+  padding-top: 5px;
+}
+
+.choose .fas.fa-1::before, .compose .fas.fa-1::before, .in_situ .fas.fa-1::before {
+  content: "\31";
+}
+
+.choose .fas.fa-2::before, .compose .fas.fa-2::before, .in_situ .fas.fa-2::before {
+  content: "\32";
+}
+
+.choose .fas.fa-3::before, .compose .fas.fa-3::before, .in_situ .fas.fa-3::before {
+  content: "\33";
+}
+
+.choose .fas.fa-mobile::before, .compose .fas.fa-mobile::before, .in_situ .fas.fa-mobile::before {
+  content: "\f3cd";
+}
+
+.choose .fas.fa-list::before, .compose .fas.fa-list::before, .in_situ .fas.fa-list::before {
+  content: "\f03a";
+}
+
+.choose .fas.fa-store::before, .compose .fas.fa-store::before, .in_situ .fas.fa-store::before {
+  content: "\f54e";
 }
 
 /*Premier breakpoint à la largeur du logo et du formulaire*/

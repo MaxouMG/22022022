@@ -86,17 +86,50 @@ aside {
       display: flex;
       flex-direction: column;
 }
+a {
+      text-decoration: none;   
+}
+
+
 .choose, .compose, .in_situ {
       @extend .button;
       width: 300px;
       height: 80px;
+      display: flex;
+      justify-content: center;
       margin-top: 20px;
       margin-bottom: 20px;
+      padding: 20px;
+     /* padding-bottom: 20px;
       padding-right: 40px;
-      padding-left: 40px;
+      padding-left: 40px;*/
       &:hover{
             background: lighten($secondary, 15%);
       }
+h3 {
+      padding-top: 5px;
+}
+
+.fas.fa-1::before{
+      content: "\31";
+}
+.fas.fa-2::before{
+      content: "\32";
+}
+.fas.fa-3::before{
+      content: "\33";
+}
+.fas.fa-mobile::before {
+      content: "\f3cd";
+      }
+.fas.fa-list::before {
+      content : "\f03a";
+      }
+.fas.fa-store::before {
+      content : "\f54e";
+      }
+            
+      
       
 }
 
