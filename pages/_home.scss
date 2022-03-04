@@ -1,9 +1,12 @@
-/*mes couleurs*/
+/*couleurs*/
 $greyaround: #C1C1C3;
 $greybground: #E0E0E0;
 $primary: #9356DC;
 $secondary: #FF79DA;
 $colorsp: ($secondary,50%, $primary);
+
+/*tailles de police ou d'icône*/
+$iconsize: 1.5em;
 
 
 /*extensions*/
@@ -89,8 +92,6 @@ aside {
 a {
       text-decoration: none;   
 }
-
-
 .choose, .compose, .in_situ {
       @extend .button;
       width: 300px;
@@ -109,7 +110,10 @@ a {
 h3 {
       padding-top: 5px;
 }
-
+.fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
+.fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
+      font-size: $iconsize;
+}
 .fas.fa-1::before{
       content: "\31";
 }
@@ -119,15 +123,15 @@ h3 {
 .fas.fa-3::before{
       content: "\33";
 }
-.fas.fa-mobile::before {
+.fas.fa-mobile-alt::before {
       content: "\f3cd";
-      }
+}
 .fas.fa-list::before {
       content : "\f03a";
-      }
+}
 .fas.fa-store::before {
       content : "\f54e";
-      }
+}
             
       
       
@@ -199,5 +203,11 @@ h3 {
                         background-color: #fff;
                   }
             
+                  .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
+                  .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
+                        font-size: $iconsize + 0.5em;
+                  }
+
+
             }
 
