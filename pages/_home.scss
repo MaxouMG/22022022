@@ -1,16 +1,16 @@
 /*couleurs*/
-$greyaround: #C1C1C3;
-$greybground: #E0E0E0;
+$greyaround: #DCDCDC;
+$greybground: #F2F2F2;
 $primary: #9356DC;
 $secondary: #FF79DA;
-$colorsp: ($secondary,50%, $primary);
 
 /*tailles de police ou d'icône*/
-$iconsize: 1.5em;
+$iconsize: 1em;
 
 
 /*extensions*/
 .button {          
+      width: 250px;
       box-shadow: 0px 5px 0px $greyaround;
       transition: 1000ms;
       border-radius: 25px;
@@ -70,12 +70,11 @@ h2 {
       padding: 10px 25px 25px 10px;
       .explore2 {
             @extend .button;
-            background-image: linear-gradient($colorsp);
+            background: linear-gradient(355deg, $primary 30%, $secondary 70%);
             color:#fff;
-            height: 40px;
-            padding-left: 25px;
-            padding-right: 25px;
-            margin: 25px 0px;
+            height: 35px;
+            padding-top: 15px;
+            margin: 25px 10px;
       }
 }
       /*Partie main, sous-partie aside et ensemble container_choice*/
@@ -90,29 +89,55 @@ aside {
       flex-direction: column;
 }
 a {
+      display: flex;
+      justify-content: center;
       text-decoration: none;   
 }
 .choose, .compose, .in_situ {
       @extend .button;
-      width: 300px;
-      height: 80px;
+      width: 350px;
+      height: 60px;
+      background-color: $greybground;
       display: flex;
-      justify-content: center;
+      padding-top: 20px;
+      padding-right: 50px;
+      padding-left: 0px;
       margin-top: 20px;
       margin-bottom: 20px;
-      padding: 20px;
-     /* padding-bottom: 20px;
-      padding-right: 40px;
-      padding-left: 40px;*/
       &:hover{
             background: lighten($secondary, 15%);
       }
-h3 {
-      padding-top: 5px;
 }
+h3 {
+      width: 210px;
+      margin-left: 0px;
+      margin-right: 0px;
+}
+.fas.fa-1, .fas.fa-2, .fas.fa-3, .fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
+      text-align: center;
+      margin-left: 0px;
+      margin-right: 0px;
+      &::before {
+            font-size: $iconsize;
+      }
+}
+/*
 .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
 .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
       font-size: $iconsize;
+}*/
+.fas.fa-1, .fas.fa-2, .fas.fa-3 {
+      width: 20px;
+      height: 20px;
+      background-color: $primary;
+      color: #fff;
+      border: 1px solid $primary;
+      border-radius: 50%;
+      margin-right: 60px;
+
+}
+.fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
+      margin-right: 50px;
 }
 .fas.fa-1::before{
       content: "\31";
@@ -135,7 +160,7 @@ h3 {
             
       
       
-}
+
 
 
 
