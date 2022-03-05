@@ -7,7 +7,6 @@ $secondary: #FF79DA;
 /*tailles de police ou d'icône*/
 $iconsize: 1em;
 
-
 /*extensions*/
 .button {          
       width: 250px;
@@ -21,6 +20,9 @@ $iconsize: 1em;
             box-shadow: 20px 15px 2px 0px $greyaround;                  
       }
 }
+
+
+
       
 
 /*Ma page d'accueil  hors en tête*/
@@ -34,6 +36,9 @@ body {
 }
 
       /*première section - réserver le menu*/
+section {
+      max-width: 505px;
+}
 .reserve {
       background-color: $greybground;
 }
@@ -42,7 +47,7 @@ body {
       justify-content: center;
       background-color: $greyaround;
       padding-top: 10px;
-      padding-bottom: 10px;      
+      padding-bottom: 10px;   
 }
 .fas.fa-map-marker-alt{   
       margin-left: 0;
@@ -78,8 +83,9 @@ h2 {
       /*Partie main, sous-partie aside et ensemble container_choice*/
 aside {
       color: #000;
-      h2 {
+      .borders {
             text-align: left;
+            width: 475px;
       }     
 }
 .container_choice {
@@ -94,7 +100,8 @@ a {
 }
 .choose, .compose, .in_situ {
       @extend .button;
-      width: 350px;
+      width: 80%;
+      max-width: 350px;
       height: 60px;
       background-color: $greybground;
       display: flex;
@@ -108,11 +115,11 @@ a {
       }
 }
 h3 {
-      width: 210px;
       color: #000;
+      word-break: break-word;
       margin-left: 0px;
       margin-right: 0px;
-      padding-top: 2px;
+      padding-top: 5px;
 }
 .fas.fa-1, .fas.fa-2, .fas.fa-3, .fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
       text-align: center;
@@ -137,9 +144,10 @@ h3 {
 }
 
 .fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
-     width: 60px;
-    padding-top: 7px;
+      width: 60px;
+      padding-top: 5px;
 }
+
 .fas.fa-1::before{
       content: "\31";
 }
@@ -160,34 +168,7 @@ h3 {
       content : "\f54e";
 }
 */
-            
-      
-      
 
-
-
-
-
-
-
-/*Premier breakpoint à la largeur du logo et du formulaire*/
-@media screen and (min-width: 505px) {
-      .reserve {                  
-            border-top-right-radius: 20px;
-            border-top-left-radius: 20px;                 
-            border-bottom-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-      }
-
-      #aroundme {
-            border-top-right-radius: 20px;
-            border-top-left-radius: 20px;
-      }
-      #explore1 {
-            border-bottom-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-      }
-}
 
 
 
@@ -199,10 +180,24 @@ h3 {
 
       /*version tablette*/
       @media screen and (min-width:768px) {
-            .reserve {
+            .reserve {                  
                   background-color: #fff;
+                  border-top-right-radius: 20px;
+                  border-top-left-radius: 20px;                 
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
             }
-            aside h2{
+      
+            #aroundme {
+                  border-top-right-radius: 20px;
+                  border-top-left-radius: 20px;
+            }
+            #explore1 {
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
+            }
+      /*Partie main, sous-partie aside et ensemble container_choice*/
+            .borders {
                   text-align: center;
             }
             .container_choice{
@@ -210,11 +205,13 @@ h3 {
                   display: flex;
                   flex-direction: row;
                   flex-wrap: wrap;
-            }           
+            }
+            .choose, .compose, .in_situ {
+                  width: inherit;
+            }
+       
       }
-
-      
-
+   
 
 
 
@@ -223,14 +220,21 @@ h3 {
 
 
 
-
-
-      /* ma version desktop*/            
+            /* ma version desktop*/            
             @media screen and (min-width: 992px) {
                   .reserve {
                         background-color: #fff;
                   }
+
+                  .container_choice {
+                        width: inherit;
+                        align-content: center;
+                  }
             
+                  .choose, .compose, .in_situ {
+                        margin-bottom: 30px;
+                  }
+
                   .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
                   .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
                         font-size: $iconsize + 0.5em;
@@ -238,4 +242,3 @@ h3 {
 
 
             }
-
