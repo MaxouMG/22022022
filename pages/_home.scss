@@ -7,6 +7,14 @@ $secondary: #FF79DA;
 /*tailles de police ou d'icône*/
 $iconsize: 1em;
 
+/* mixin*/
+@mixin museum-setting {
+      width: 80%;
+      max-width: 350px;
+      margin-top: 20px;
+      margin-bottom: 20px;     
+}
+
 /*extensions*/
 .button {          
       width: 250px;
@@ -38,6 +46,8 @@ body {
       /*première section - réserver le menu*/
 section {
       max-width: 505px;
+      background-color: $greybground;
+      text-align: center;
 }
 .reserve {
       background-color: $greybground;
@@ -68,9 +78,9 @@ h2 {
       padding: 10px 25px 10px 10px;
 }
 #explore1 {
-      background-color: $greybground;
+     /* background-color: $greybground;
       text-align: center;
-      padding: 10px 25px 25px 10px;
+      padding: 10px 25px 25px 10px;*/
       .explore2 {
             @extend .button;
             background: linear-gradient(355deg, $primary 30%, $secondary 70%);
@@ -100,16 +110,13 @@ a {
 }
 .choose, .compose, .in_situ {
       @extend .button;
-      width: 80%;
-      max-width: 350px;
+      @include museum-setting;
       height: 60px;
       background-color: $greybground;
       display: flex;
       padding-top: 20px;
       padding-right: 50px;
       padding-left: 0px;
-      margin-top: 20px;
-      margin-bottom: 20px;
       &:hover{
             background: lighten($secondary, 15%);
       }
@@ -168,6 +175,18 @@ h3 {
       content : "\f54e";
 }
 */
+      /* partie main section avec cards*/
+
+.lpdg {
+      @extend .button;
+      @include museum-setting
+
+}
+
+#lpdg_home {
+      width: 100%;
+      border: 1px solid black;
+}
 
 
 
@@ -188,13 +207,10 @@ h3 {
                   border-bottom-left-radius: 20px;
             }
       
-            #aroundme {
+            #aroundme, #explore1 {
+                  max-width: 505px;
                   border-top-right-radius: 20px;
                   border-top-left-radius: 20px;
-            }
-            #explore1 {
-                  border-bottom-right-radius: 20px;
-                  border-bottom-left-radius: 20px;
             }
       /*Partie main, sous-partie aside et ensemble container_choice*/
             .borders {
@@ -208,6 +224,10 @@ h3 {
             }
             .choose, .compose, .in_situ {
                   width: inherit;
+            }
+      /* partie main section avec cards*/
+            section {
+                  max-width: none;
             }
        
       }

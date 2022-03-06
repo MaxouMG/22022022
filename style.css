@@ -2,8 +2,9 @@
 /*Ceci regroupe les sous-dossiers de -layout et de -pages */
 /*couleurs*/
 /*tailles de police ou d'icône*/
+/* mixin*/
 /*extensions*/
-.button, #explore1 .explore2, .choose, .compose, .in_situ {
+.button, #explore1 .explore2, .choose, .compose, .in_situ, .lpdg {
   width: 250px;
   -webkit-box-shadow: 0px 5px 0px #DCDCDC;
           box-shadow: 0px 5px 0px #DCDCDC;
@@ -13,7 +14,7 @@
   border: 1px solid #F2F2F2;
 }
 
-.button:hover, #explore1 .explore2:hover, .choose:hover, .compose:hover, .in_situ:hover {
+.button:hover, #explore1 .explore2:hover, .choose:hover, .compose:hover, .in_situ:hover, .lpdg:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
   -webkit-filter: opacity(70%);
@@ -39,6 +40,8 @@ body {
 /*première section - réserver le menu*/
 section {
   max-width: 505px;
+  background-color: #F2F2F2;
+  text-align: center;
 }
 
 .reserve {
@@ -92,9 +95,9 @@ h2 {
 }
 
 #explore1 {
-  background-color: #F2F2F2;
-  text-align: center;
-  padding: 10px 25px 25px 10px;
+  /* background-color: $greybground;
+      text-align: center;
+      padding: 10px 25px 25px 10px;*/
 }
 
 #explore1 .explore2 {
@@ -139,6 +142,8 @@ a {
 .choose, .compose, .in_situ {
   width: 80%;
   max-width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 60px;
   background-color: #F2F2F2;
   display: -webkit-box;
@@ -147,8 +152,6 @@ a {
   padding-top: 20px;
   padding-right: 50px;
   padding-left: 0px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .choose:hover, .compose:hover, .in_situ:hover {
@@ -216,6 +219,19 @@ h3 {
       content : "\f54e";
 }
 */
+/* partie main section avec cards*/
+.lpdg {
+  width: 80%;
+  max-width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#lpdg_home {
+  width: 100%;
+  border: 1px solid black;
+}
+
 /*version tablette*/
 @media screen and (min-width: 768px) {
   .reserve {
@@ -225,13 +241,10 @@ h3 {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
   }
-  #aroundme {
+  #aroundme, #explore1 {
+    max-width: 505px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-  }
-  #explore1 {
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
   }
   /*Partie main, sous-partie aside et ensemble container_choice*/
   .borders {
@@ -251,6 +264,10 @@ h3 {
   }
   .choose, .compose, .in_situ {
     width: inherit;
+  }
+  /* partie main section avec cards*/
+  section {
+    max-width: none;
   }
 }
 
