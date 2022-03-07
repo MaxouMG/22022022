@@ -15,6 +15,13 @@ $iconsize: 1em;
       margin-bottom: 20px;     
 }
 
+@mixin centernull {
+      text-align: center;
+      margin-right: 0;
+      margin-left: 0;
+}
+
+
 /*extensions*/
 .button {          
       width: 250px;
@@ -47,7 +54,7 @@ body {
 section {
       max-width: 505px;
       background-color: $greybground;
-      text-align: center;
+     @include centernull;
 }
 .reserve {
       background-color: $greybground;
@@ -59,37 +66,33 @@ section {
       padding-top: 10px;
       padding-bottom: 10px;   
 }
-.fas.fa-map-marker-alt{   
-      margin-left: 0;
-      margin-right: 0;  
+.fas.fa-map-marker-alt{  
+      @include centernull;
 }
 ::placeholder{
       color: #000;
 }
 #city {
-      text-align: center;
+      @include centernull;
       border: none;
       background-color: $greyaround;
-      margin-left: 0;
-      margin-right: 0;
 }
 h2 {
       text-align: center;
       padding: 10px 25px 10px 10px;
 }
 #explore1 {
-     /* background-color: $greybground;
-      text-align: center;
-      padding: 10px 25px 25px 10px;*/
       .explore2 {
             @extend .button;
             background: linear-gradient(355deg, $primary 30%, $secondary 70%);
             color:#fff;
             height: 35px;
-            padding-top: 15px;
-            margin: 25px 10px;
+            padding-top: 20px;
+            margin-top: 25px;
+            margin-bottom: 25px;
       }
 }
+
       /*Partie main, sous-partie aside et ensemble container_choice*/
 aside {
       color: #000;
@@ -103,8 +106,9 @@ aside {
       flex-direction: column;
 }
 a {
+      width: 95%;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       text-decoration: none;
       margin-left: 0px; 
 }
@@ -112,6 +116,7 @@ a {
       @extend .button;
       @include museum-setting;
       height: 60px;
+      position: relative;
       background-color: $greybground;
       display: flex;
       padding-top: 20px;
@@ -128,31 +133,35 @@ h3 {
       margin-right: 0px;
       padding-top: 5px;
 }
-.fas.fa-1, .fas.fa-2, .fas.fa-3, .fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
-      text-align: center;
-      margin-left: 0px;
-      margin-right: 0px;
-      &::before {
-            font-size: $iconsize;
-      }
-      & :hover {
-            color: $primary;
-      }
-}
 .fas.fa-1, .fas.fa-2, .fas.fa-3 {
       width: 30px;
       height: 30px;
       line-height: 30px;
-      float:left;
+      position: absolute;
+      left: -4%;
       background-color: $primary;
       color: #fff;
       border: 1px solid $primary;
       border-radius: 50%;
+      @include centernull;
+      &::before {
+            font-size: $iconsize;
+      }
 }
 
 .fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
       width: 60px;
-      padding-top: 5px;
+      /*color: #000;*/
+      position: absolute;
+      top: 30%;
+      left: 5%;
+      @include centernull;
+      & :hover{
+            color: $primary;
+      }
+      &::before {
+            font-size: $iconsize+0.5em;
+      }
 }
 
 .fas.fa-1::before{
@@ -177,13 +186,13 @@ h3 {
 */
       /* partie main section avec cards*/
 
-.lpdg {
+.lpdg, .lne, .alf, .ldds {
       @extend .button;
       @include museum-setting
 
 }
 
-#lpdg_home {
+#lpdg_home, #lne_home, #alf_home, #ldds_home{
       width: 100%;
       border: 1px solid black;
 }
@@ -222,8 +231,13 @@ h3 {
                   flex-direction: row;
                   flex-wrap: wrap;
             }
+            a {
+                  margin-right: 10%;
+            }
             .choose, .compose, .in_situ {
-                  width: inherit;
+                  width: 40%;
+                  padding-right: 0px;
+                  padding-left: 0px;
             }
       /* partie main section avec cards*/
             section {
@@ -249,6 +263,9 @@ h3 {
                   .container_choice {
                         width: inherit;
                         align-content: center;
+                  }
+                  a {
+                        margin-right: 20%;
                   }
             
                   .choose, .compose, .in_situ {

@@ -4,7 +4,7 @@
 /*tailles de police ou d'icône*/
 /* mixin*/
 /*extensions*/
-.button, #explore1 .explore2, .choose, .compose, .in_situ, .lpdg {
+.button, #explore1 .explore2, .choose, .compose, .in_situ, .lpdg, .lne, .alf, .ldds {
   width: 250px;
   -webkit-box-shadow: 0px 5px 0px #DCDCDC;
           box-shadow: 0px 5px 0px #DCDCDC;
@@ -14,7 +14,7 @@
   border: 1px solid #F2F2F2;
 }
 
-.button:hover, #explore1 .explore2:hover, .choose:hover, .compose:hover, .in_situ:hover, .lpdg:hover {
+.button:hover, #explore1 .explore2:hover, .choose:hover, .compose:hover, .in_situ:hover, .lpdg:hover, .lne:hover, .alf:hover, .ldds:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
   -webkit-filter: opacity(70%);
@@ -42,6 +42,8 @@ section {
   max-width: 505px;
   background-color: #F2F2F2;
   text-align: center;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .reserve {
@@ -61,8 +63,9 @@ section {
 }
 
 .fas.fa-map-marker-alt {
-  margin-left: 0;
+  text-align: center;
   margin-right: 0;
+  margin-left: 0;
 }
 
 ::-webkit-input-placeholder {
@@ -83,10 +86,10 @@ section {
 
 #city {
   text-align: center;
+  margin-right: 0;
+  margin-left: 0;
   border: none;
   background-color: #DCDCDC;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 h2 {
@@ -94,18 +97,13 @@ h2 {
   padding: 10px 25px 10px 10px;
 }
 
-#explore1 {
-  /* background-color: $greybground;
-      text-align: center;
-      padding: 10px 25px 25px 10px;*/
-}
-
 #explore1 .explore2 {
   background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
   color: #fff;
   height: 35px;
-  padding-top: 15px;
-  margin: 25px 10px;
+  padding-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 /*Partie main, sous-partie aside et ensemble container_choice*/
@@ -129,12 +127,13 @@ aside .borders {
 }
 
 a {
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   text-decoration: none;
   margin-left: 0px;
 }
@@ -145,6 +144,7 @@ a {
   margin-top: 20px;
   margin-bottom: 20px;
   height: 60px;
+  position: relative;
   background-color: #F2F2F2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,34 +166,42 @@ h3 {
   padding-top: 5px;
 }
 
-.fas.fa-1, .fas.fa-2, .fas.fa-3, .fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
-  text-align: center;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before, .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
-  font-size: 1em;
-}
-
-.fas.fa-1 :hover, .fas.fa-2 :hover, .fas.fa-3 :hover, .fas.fa-mobile-alt :hover, .fas.fa-list :hover, .fas.fa-store :hover {
-  color: #9356DC;
-}
-
 .fas.fa-1, .fas.fa-2, .fas.fa-3 {
   width: 30px;
   height: 30px;
   line-height: 30px;
-  float: left;
+  position: absolute;
+  left: -4%;
   background-color: #9356DC;
   color: #fff;
   border: 1px solid #9356DC;
   border-radius: 50%;
+  text-align: center;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before {
+  font-size: 1em;
 }
 
 .fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
   width: 60px;
-  padding-top: 5px;
+  /*color: #000;*/
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  text-align: center;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.fas.fa-mobile-alt :hover, .fas.fa-list :hover, .fas.fa-store :hover {
+  color: #9356DC;
+}
+
+.fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
+  font-size: 1.5em;
 }
 
 .fas.fa-1::before {
@@ -220,14 +228,14 @@ h3 {
 }
 */
 /* partie main section avec cards*/
-.lpdg {
+.lpdg, .lne, .alf, .ldds {
   width: 80%;
   max-width: 350px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-#lpdg_home {
+#lpdg_home, #lne_home, #alf_home, #ldds_home {
   width: 100%;
   border: 1px solid black;
 }
@@ -262,8 +270,13 @@ h3 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  a {
+    margin-right: 10%;
+  }
   .choose, .compose, .in_situ {
-    width: inherit;
+    width: 40%;
+    padding-right: 0px;
+    padding-left: 0px;
   }
   /* partie main section avec cards*/
   section {
@@ -281,10 +294,14 @@ h3 {
     -ms-flex-line-pack: center;
         align-content: center;
   }
+  a {
+    margin-right: 20%;
+  }
   .choose, .compose, .in_situ {
     margin-bottom: 30px;
   }
-  .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before, .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
+  .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
+  .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
     font-size: 1.5em;
   }
 }
