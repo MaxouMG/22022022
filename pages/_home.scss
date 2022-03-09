@@ -5,7 +5,7 @@ $primary: #9356DC;
 $secondary: #FF79DA;
 
 /*tailles de police ou d'icône*/
-$iconsize: 1.2em;
+$ftsize: 1.1em;
 
 /* mixin*/
 @mixin museum-setting {
@@ -140,7 +140,7 @@ section h2 {
 
 .picture {
       width: 15%;
-      font-size: $iconsize;
+      font-size: $ftsize;
       text-align: right;
       &:hover{
             color: $primary;
@@ -148,9 +148,30 @@ section h2 {
 }
 h3 {
       width: 75%;
+      font-size: $ftsize;
 }
 
       /* partie main section avec cards*/
+
+
+.menu_card {
+      @extend .button;
+      background-color: #fff;
+      display: flex;
+      margin: 20px;
+
+}
+#img_home {
+      width: 95%;
+      height: 50%;
+      object-fit: cover;
+      border: 1px solid $primary;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;   
+}
+.icon-legend {
+      height: 50%;
+}
 /*
 .lpdg, .lne, .alf, .ldds {
       @extend .button;
@@ -200,7 +221,7 @@ h3 {
             a {
                   margin-right: 10%;
             }
-            .choose, .compose, .in_situ {
+            .choose {
                   width: 40%;
                   padding-right: 0px;
                   padding-left: 0px;
@@ -230,18 +251,8 @@ h3 {
                         width: inherit;
                         align-content: center;
                   }
-                  a {
-                        margin-right: 20%;
-                  }
             
-                  .choose, .compose, .in_situ {
+                  .choose {
                         margin-bottom: 30px;
                   }
-
-                  .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
-                  .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
-                        font-size: $iconsize + 0.5em;
-                  }
-
-
             }
