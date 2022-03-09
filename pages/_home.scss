@@ -5,7 +5,7 @@ $primary: #9356DC;
 $secondary: #FF79DA;
 
 /*tailles de police ou d'icône*/
-$iconsize: 1em;
+$iconsize: 1.2em;
 
 /* mixin*/
 @mixin museum-setting {
@@ -23,8 +23,7 @@ $iconsize: 1em;
 
 
 /*extensions*/
-.button {          
-      width: 250px;
+.button {
       box-shadow: 0px 5px 0px $greyaround;
       transition: 1000ms;
       border-radius: 25px;
@@ -43,7 +42,7 @@ $iconsize: 1em;
 /*Ma page d'accueil  hors en tête*/
       /* mobile first*/
 body {
-      min-width: 250px;
+      margin: 0 auto;
       box-sizing: border-box;
       flex-direction: column;
       text-decoration: none;
@@ -53,8 +52,9 @@ body {
       /*première section - réserver le menu*/
 section {
       max-width: 505px;
+      margin: 0 auto;
+      text-align: center;
       background-color: $greybground;
-     @include centernull;
 }
 .reserve {
       background-color: $greybground;
@@ -77,13 +77,14 @@ section {
       border: none;
       background-color: $greyaround;
 }
-h2 {
+section h2 {
       text-align: center;
       padding: 10px 25px 10px 10px;
 }
 #explore1 {
       .explore2 {
             @extend .button;
+            width: 250px;
             background: linear-gradient(355deg, $primary 30%, $secondary 70%);
             color:#fff;
             height: 35px;
@@ -94,98 +95,63 @@ h2 {
 }
 
       /*Partie main, sous-partie aside et ensemble container_choice*/
-aside {
-      color: #000;
-      .borders {
-            text-align: left;
-            width: 475px;
-      }     
-}
+/*aside {
+      color: #000;*/
+.borders {
+            max-width: 485px;
+            text-align: start;
+            padding: 10px 25px;
+}     
+
 .container_choice {
       display: flex;
-      flex-direction: column;
+      flex-direction: column;      
 }
-a {
-      width: 95%;
-      display: flex;
-      justify-content: flex-end;
-      text-decoration: none;
-      margin-left: 0px; 
-}
-.choose, .compose, .in_situ {
+.choose {
       @extend .button;
-      @include museum-setting;
-      height: 60px;
-      position: relative;
-      background-color: $greybground;
+      width: 88%;
+      max-width: 505px;
+      height: 80px;
       display: flex;
-      padding-top: 20px;
-      padding-right: 50px;
-      padding-left: 0px;
+      align-items: center;
+      background: $greybground;    
+      margin-top: 20px;
+      margin-bottom: 20px;
+      position: relative;
       &:hover{
-            background: lighten($secondary, 15%);
+            background-color: lighten($primary,30%);
       }
 }
-h3 {
-      color: #000;
-      word-break: break-word;
-      margin-left: 0px;
-      margin-right: 0px;
-      padding-top: 5px;
-}
-.fas.fa-1, .fas.fa-2, .fas.fa-3 {
+.number{
+      position: absolute;
+      right: 93%;
+      p {
       width: 30px;
       height: 30px;
       line-height: 30px;
-      position: absolute;
-      left: -4%;
+      text-align: center;
       background-color: $primary;
       color: #fff;
       border: 1px solid $primary;
       border-radius: 50%;
-      @include centernull;
-      &::before {
-            font-size: $iconsize;
       }
 }
 
-.fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
-      width: 60px;
-      /*color: #000;*/
-      position: absolute;
-      top: 30%;
-      left: 5%;
-      @include centernull;
-      & :hover{
+
+.picture {
+      width: 15%;
+      font-size: $iconsize;
+      text-align: right;
+      &:hover{
             color: $primary;
       }
-      &::before {
-            font-size: $iconsize+0.5em;
-      }
+}
+h3 {
+      width: 75%;
 }
 
-.fas.fa-1::before{
-      content: "\31";
-}
-.fas.fa-2::before{
-      content: "\32";
-}
-.fas.fa-3::before{
-      content: "\33";
-}
-/*
-.fas.fa-mobile-alt::before {
-      content: "\f3cd";
-}
-.fas.fa-list::before {
-      content : "\f03a";
-}
-.fas.fa-store::before {
-      content : "\f54e";
-}
-*/
       /* partie main section avec cards*/
-
+/*
 .lpdg, .lne, .alf, .ldds {
       @extend .button;
       @include museum-setting
@@ -195,7 +161,7 @@ h3 {
 #lpdg_home, #lne_home, #alf_home, #ldds_home{
       width: 100%;
       border: 1px solid black;
-}
+}*/
 
 
 

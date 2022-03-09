@@ -4,8 +4,7 @@
 /*tailles de police ou d'icône*/
 /* mixin*/
 /*extensions*/
-.button, #explore1 .explore2, .choose, .compose, .in_situ, .lpdg, .lne, .alf, .ldds {
-  width: 250px;
+.button, #explore1 .explore2, .choose {
   -webkit-box-shadow: 0px 5px 0px #DCDCDC;
           box-shadow: 0px 5px 0px #DCDCDC;
   -webkit-transition: 1000ms;
@@ -14,7 +13,7 @@
   border: 1px solid #F2F2F2;
 }
 
-.button:hover, #explore1 .explore2:hover, .choose:hover, .compose:hover, .in_situ:hover, .lpdg:hover, .lne:hover, .alf:hover, .ldds:hover {
+.button:hover, #explore1 .explore2:hover, .choose:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
   -webkit-filter: opacity(70%);
@@ -26,7 +25,7 @@
 /*Ma page d'accueil  hors en tête*/
 /* mobile first*/
 body {
-  min-width: 250px;
+  margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-box-orient: vertical;
@@ -40,10 +39,9 @@ body {
 /*première section - réserver le menu*/
 section {
   max-width: 505px;
-  background-color: #F2F2F2;
+  margin: 0 auto;
   text-align: center;
-  margin-right: 0;
-  margin-left: 0;
+  background-color: #F2F2F2;
 }
 
 .reserve {
@@ -92,12 +90,13 @@ section {
   background-color: #DCDCDC;
 }
 
-h2 {
+section h2 {
   text-align: center;
   padding: 10px 25px 10px 10px;
 }
 
 #explore1 .explore2 {
+  width: 250px;
   background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
   color: #fff;
   height: 35px;
@@ -107,13 +106,12 @@ h2 {
 }
 
 /*Partie main, sous-partie aside et ensemble container_choice*/
-aside {
-  color: #000;
-}
-
-aside .borders {
-  text-align: left;
-  width: 475px;
+/*aside {
+      color: #000;*/
+.borders {
+  max-width: 485px;
+  text-align: start;
+  padding: 10px 25px;
 }
 
 .container_choice {
@@ -126,120 +124,68 @@ aside .borders {
           flex-direction: column;
 }
 
-a {
-  width: 95%;
+.choose {
+  width: 88%;
+  max-width: 505px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  text-decoration: none;
-  margin-left: 0px;
-}
-
-.choose, .compose, .in_situ {
-  width: 80%;
-  max-width: 350px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #F2F2F2;
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 60px;
   position: relative;
-  background-color: #F2F2F2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 20px;
-  padding-right: 50px;
-  padding-left: 0px;
 }
 
-.choose:hover, .compose:hover, .in_situ:hover {
-  background: #ffc6ef;
+.choose:hover {
+  background-color: #e4d5f6;
 }
 
-h3 {
-  color: #000;
-  word-break: break-word;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-top: 5px;
+.number {
+  position: absolute;
+  right: 93%;
 }
 
-.fas.fa-1, .fas.fa-2, .fas.fa-3 {
+.number p {
   width: 30px;
   height: 30px;
   line-height: 30px;
-  position: absolute;
-  left: -4%;
+  text-align: center;
   background-color: #9356DC;
   color: #fff;
   border: 1px solid #9356DC;
   border-radius: 50%;
-  text-align: center;
-  margin-right: 0;
-  margin-left: 0;
 }
 
-.fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before {
-  font-size: 1em;
+.picture {
+  width: 15%;
+  font-size: 1.2em;
+  text-align: right;
 }
 
-.fas.fa-mobile-alt, .fas.fa-list, .fas.fa-store {
-  width: 60px;
-  /*color: #000;*/
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  text-align: center;
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.fas.fa-mobile-alt :hover, .fas.fa-list :hover, .fas.fa-store :hover {
+.picture:hover {
   color: #9356DC;
 }
 
-.fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
-  font-size: 1.5em;
+h3 {
+  width: 75%;
 }
 
-.fas.fa-1::before {
-  content: "\31";
-}
-
-.fas.fa-2::before {
-  content: "\32";
-}
-
-.fas.fa-3::before {
-  content: "\33";
-}
-
-/*
-.fas.fa-mobile-alt::before {
-      content: "\f3cd";
-}
-.fas.fa-list::before {
-      content : "\f03a";
-}
-.fas.fa-store::before {
-      content : "\f54e";
-}
-*/
 /* partie main section avec cards*/
+/*
 .lpdg, .lne, .alf, .ldds {
-  width: 80%;
-  max-width: 350px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+      @extend .button;
+      @include museum-setting
+
 }
 
-#lpdg_home, #lne_home, #alf_home, #ldds_home {
-  width: 100%;
-  border: 1px solid black;
-}
-
+#lpdg_home, #lne_home, #alf_home, #ldds_home{
+      width: 100%;
+      border: 1px solid black;
+}*/
 /*version tablette*/
 @media screen and (min-width: 768px) {
   .reserve {
@@ -302,7 +248,7 @@ h3 {
   }
   .fas.fa-1::before, .fas.fa-2::before, .fas.fa-3::before,
   .fas.fa-mobile-alt::before, .fas.fa-list::before, .fas.fa-store::before {
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
 }
 
