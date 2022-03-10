@@ -5,7 +5,7 @@ $primary: #9356DC;
 $secondary: #FF79DA;
 
 /*tailles de police ou d'icône*/
-$ftsize: 1.1em;
+$ftsize: 1em;
 
 /* mixin*/
 @mixin museum-setting {
@@ -15,10 +15,12 @@ $ftsize: 1.1em;
       margin-bottom: 20px;     
 }
 
-@mixin centernull {
+@mixin frontiers {
+      min-width: 360px;
+      flex-direction: column;
+      text-decoration: none;
+      list-style-type: none;
       text-align: center;
-      margin-right: 0;
-      margin-left: 0;
 }
 
 
@@ -34,36 +36,25 @@ $ftsize: 1.1em;
             box-shadow: 20px 15px 2px 0px $greyaround;                  
       }
 }
-
-
-
-      
-
+ 
 /*Ma page d'accueil  hors en tête*/
       /* mobile first*/
-body {
-      /*box-sizing: border-box;*/
-      min-width: 250px;
-      flex-direction: column;
-      text-decoration: none;
-      list-style-type: none;
-}
-
       /*première section - réserver le menu*/
 section {
-      display: flex;
-      justify-content: center;
-      align-items: center;      
-      text-align: center;
+      @include frontiers;
       background-color: $greybground;
 }
-.reserve {      
+.reserve {
+      @include frontiers;   
       background-color: $greybground;
       display: flex;
       flex-direction: column;
-      /*justify-content: center;
-      align-items: center;
-      text-align: center;*/
+      margin-right: 5px;
+      margin-left: 5px;
+}
+h2 {
+      padding-right: 15px;
+      padding-left: 15px;
 }
 #aroundme {
       width: 100%;
@@ -71,18 +62,16 @@ section {
       padding-top: 10px;
       padding-bottom: 10px; 
 }
-.fas.fa-map-marker-alt{  
-      @include centernull;
-}
 ::placeholder{
       color: #000;
 }
 #city {
-      @include centernull;
+      text-align: center;
+      margin-right: 0;
+      margin-left: 0;
       border: none;
       background-color: $greyaround;
 }
-
 #explore1 {
       display: flex;
       justify-content: center;
@@ -97,32 +86,39 @@ section {
             padding-top: 20px;
             margin-top: 25px;
             margin-bottom: 25px;
+            }
+      p {
+            padding-right: 15px;
+            padding-left: 15px;
       }
 }
-
       /*Partie main, sous-partie aside et ensemble container_choice*/
-/*aside {
-      color: #000;*/
+aside {
+      @include frontiers;
+      
+}
 .borders {
-            max-width: 485px;
-            text-align: start;
-            padding: 10px 25px;
-}     
-
-.container_choice {
       display: flex;
-      flex-direction: column;      
+      flex-direction: column;
+      text-align: left;
+      padding: 10px 25px;
+      @media screen and (min-width: 500px) {
+            width: 35%;
+            text-align: end;            
+      }
+}
+.container_choice {
+      margin: 0 auto;
+      width: 80%;
+      max-width: 500px;
 }
 .choose {
       @extend .button;
-      width: 88%;
-      max-width: 505px;
-      height: 80px;
+      height: 85px;
       display: flex;
       align-items: center;
-      background: $greybground;    
-      margin-top: 20px;
-      margin-bottom: 20px;
+      background: $greybground;
+      margin-bottom: 30px;
       position: relative;
       &:hover{
             background-color: lighten($primary,30%);
@@ -130,20 +126,18 @@ section {
 }
 .number{
       position: absolute;
-      right: 93%;
-      p {
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      background-color: $primary;
-      color: #fff;
-      border: 1px solid $primary;
-      border-radius: 50%;
+      right: 95%;
+      p{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: $primary;
+            color: #fff;
+            border: 1px solid $primary;
+            border-radius: 50%;
       }
 }
-
-
 .picture {
       width: 15%;
       font-size: $ftsize;
@@ -153,8 +147,7 @@ section {
       }
 }
 h3 {
-      width: 75%;
-      font-size: $ftsize;
+      padding-left: 5%;
 }
 
       /* partie main section avec cards*/
@@ -194,19 +187,29 @@ h3 {
 
       /*version tablette*/
       @media screen and (min-width:768px) {
-            .reserve {                  
+            section {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;  
+                  text-align: center;
+                  background-color: $greybground;
+                  padding-bottom: 5px;
+            }
+
+            .reserve {
+                  width: 550px;                
                   background-color: #fff;           
                   border-bottom-right-radius: 20px;
                   border-bottom-left-radius: 20px;
             }
       
             #aroundme, #explore1 {
-                  max-width: 505px;
                   border-top-right-radius: 20px;
                   border-top-left-radius: 20px;
             }
       /*Partie main, sous-partie aside et ensemble container_choice*/
             .borders {
+                  width: 100%;
                   text-align: center;
             }
             .container_choice{
@@ -214,6 +217,7 @@ h3 {
                   display: flex;
                   flex-direction: row;
                   flex-wrap: wrap;
+                  justify-content: center;
             }
             a {
                   margin-right: 10%;
@@ -222,6 +226,8 @@ h3 {
                   width: 40%;
                   padding-right: 0px;
                   padding-left: 0px;
+                  margin-right: 20px;
+                  margin-left: 20px;
             }
       /* partie main section avec cards*/
             section {
