@@ -1,9 +1,9 @@
-@import 'main';
 @import 'pages/home';
 @import 'layout/header';
 
 /*Ceci est ma page principale de style*/
-* {
+body {
       margin: 0 auto;
       font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
 }
