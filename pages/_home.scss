@@ -3,6 +3,7 @@ $greyaround: #DCDCDC;
 $greybground: #F2F2F2;
 $primary: #9356DC;
 $secondary: #FF79DA;
+$tertiary: #99E2D0;
 
 /*tailles de police ou d'icône*/
 $ftsize: 1em;
@@ -36,6 +37,10 @@ $ftsize: 1em;
             box-shadow: 20px 15px 2px 0px $greyaround;                  
       }
 }
+
+/*loading spinner */
+
+
  
 /*Ma page d'accueil  hors en tête*/
       /* mobile first*/
@@ -50,8 +55,6 @@ section {
       background-color: $greybground;
       display: flex;
       flex-direction: column;
-      /*margin-right: 5px;
-      margin-left: 5px;*/
 }
 h2 {
       padding-right: 15px;
@@ -198,11 +201,9 @@ h3 {
       font-size: $ftsize+1em;
       padding-right: 15px;
       /* et a la fin je remplis ce coeur*/
-      /*
-      &:hover {
-            color: $secondary;
-            transition: linear 400ms;
-            color: $primary;
+     /* &:hover {
+      
+
       }*/
 }
 
@@ -211,10 +212,11 @@ h3 {
 
       .new {
             width: fit-content;
-            border: 1px solid green;
+            border: 1px solid darken($tertiary,30%);
             border-radius: 5px;
-            color: green;
-            background-color: greenyellow;
+            color: darken($tertiary,30%);
+            background-color: $tertiary;
+            box-shadow: 2px 2px 5px darken($greyaround, 30%);
             font-weight: bold;
             padding-top: 10px;
             padding-bottom: 10px;
