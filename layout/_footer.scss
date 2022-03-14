@@ -21,7 +21,6 @@ footer {
       display: flex;
       @include frontiers;
       text-align: start;
-      /*justify-content: flex-start;*/
       padding: 25px;
 
 
@@ -50,7 +49,11 @@ h1 {
       font-size: $ftsize;
       text-align: right;
 }
-
-a {
-      color: #fff;
+.inform {
+      a {
+            color: #fff;
+      }
+      p {
+            padding-left: inherit;
+      }
 }
