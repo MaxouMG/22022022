@@ -1,3 +1,6 @@
+/*couleurs*/
+$greyaround: #DCDCDC;
+$greybground: #F2F2F2;
 
 /*tailles de police ou d'icône*/
 $ftsize: 1em;
@@ -22,38 +25,79 @@ footer {
       @include frontiers;
       text-align: start;
       padding: 25px;
-
-
-}
-
-h1 {
-      font-family: $font-fam_titles;
-      display: flex;
-      justify-content: flex-start;      
-}
-
-.resume {
-      text-align: start;
-}
-
-.partners {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-
-}
-
-.f_icon {
-      width: 5%;
-      font-size: $ftsize;
-      text-align: right;
-}
-.inform {
-      a {
-            color: #fff;
+      .resume {
+            text-align: start;
+            .partners {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: flex-start;
+                  align-items: center;
+                  .f_icon {
+                        width: 5%;
+                        font-size: $ftsize;
+                        text-align: right;
+                  }
+            }
       }
-      p {
-            padding-left: inherit;
+      .inform {
+            a {
+                  color: #fff;
+            }
+            p {
+                  padding-left: inherit;
+            }
       }
 }
+footer {
+      h1 {
+            font-family: $font-fam_titles;
+            display: flex;
+            justify-content: flex-start;
+      }     
+}
+
+
+
+
+
+
+
+
+
+            /*version tablette*/
+            @media screen and (min-width:768px) {
+                  footer {
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        border: 2px dashed $greyaround;
+                        h1, .resume {
+                              width: 350px;                              
+                              border-left: 2px dashed $greyaround;
+                              border-right: 2px dashed $greyaround;
+                              justify-content: center;
+                              padding-left: 15px;
+                              padding-right: 15px;
+                              background-color: $greyaround;
+                              color:#000;
+                        }
+                        h1 {
+                              border-top: 2px dashed $greyaround;
+                              margin-bottom: 0;
+                              padding-top: 15px;
+
+                        }
+                        .resume {
+                              border-bottom: 2px dashed $greyaround;
+                              padding-bottom: 15px;
+                        }
+                  }
+                  footer {
+                        .inform {
+                              a {
+                                    color: #000;
+                              }
+                        }
+                  }
+            
+            }

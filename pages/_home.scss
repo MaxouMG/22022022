@@ -38,77 +38,57 @@ $ftsize: 1em;
       }
 }
 
-/*loading spinner */
-
-@keyframes wait {
-      0% {
-            transform: rotate (0deg), scale (0.8);
-      }
-      25% {
-            transform: rotate (90deg), scale (1);
-      }
-      50% {
-            transform: rotate (180deg), scale (1.2);
-      }
-      75% {
-            transform: rotate (270deg), scale (1);
-      }
-      100% {
-            transform: rotate (360deg), scale (0.8);
-      }
-}
-
 
 
  
 /*Ma page d'accueil  hors en tête*/
       /* mobile first*/
       /*première section - réserver le menu*/
-
-/* 
+/*
 body {
       z-index: 0;
       .loading {
-            margin: 0 auto;
-            width: 150px;
-            height: 150px;
-            position: fixed;
-            top: 50%;
-            left: 30%;            
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
             border: 15px solid $tertiary;
+            width: 150px;
+            height: 150px;      
             border-top-color: $primary;
             border-bottom-color: $primary;
             border-left-color: $secondary;
             border-right-color: $secondary;
             border-radius: 50%;
-            animation: wait 3000ms infinite alternate;
-            z-index: 1;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
       }
-      .loading::before {
+      &:hover {
             background-color: $tertiary;
-            opacity: 0.8;
-            width: 100%;
-            height: 100%;
-      }
-      @keyframes wait {
-            0% {
-                  transform: rotate (0deg), scale (0.8);
-            }
-            25% {
-                  transform: rotate (90deg), scale (1);
-            }
-            50% {
-                  transform: rotate (180deg), scale (1.2);
-            }
-            75% {
-                  transform: rotate (270deg), scale (1);
-            }
-            100% {
-                  transform: rotate (360deg), scale (0.8);
+            opacity: 0.2;
+            z-index: 1;
+            .loading {
+                  animation: wait 2s alternate;
+                  animation-iteration-count: 1;
+                  }
+                  @keyframes wait {
+                  0% {
+                  transform: scale(1) rotate(0);
+                  }
+                  50% {
+                  transform: scale(1.5) rotate(180deg);
+                  }
+                  100% {
+                  transform: scale(1) rotate(360deg);
+                  }
             }
       }
+}
+*/
+
       
-}*/
+
 
 section {
       @include frontiers;
@@ -331,46 +311,45 @@ section {
             }
 
       /*Partie main, sous-partie aside et ensemble container_choice*/
-aside {
-      .borders {
-            width: 100%;
-            text-align: center;
-      }
-      .container_choice{
-            width: inherit;
-            max-width: none;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-      }
-      a {
-            margin-right: 10%;
-      }
-      .choose {
-            width: 40%;
-            padding-right: 0px;
-            padding-left: 0px;
-            margin-right: 20px;
-            margin-left: 20px;
-      }
-}           
+            aside, section {
+                  .borders {
+                        width: 100%;
+                        text-align: center;
+                  }
+            }
+            aside {
+                  .container_choice{
+                        width: inherit;
+                        max-width: none;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                  }
+                  a {
+                        margin-right: 10%;
+                  }
+                  .choose {
+                        width: 40%;
+                        padding-right: 0px;
+                        padding-left: 0px;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                  }
+            }           
       /* partie main section avec cards*/
             main section {
                   max-width: none;
                   flex-direction: row;
                   flex-wrap: wrap;
-            }
-
-            .menu_card{
-                  margin-left: 15px;
-                  margin-right: 15px;
-            }
-
-            #img_home1, #img_home2, #img_home3, #img_home4 {
-                  width: 390px;                  
-            }
-       
+                  .menu_card{
+                        margin-left: 15px;
+                        margin-right: 15px;
+                        #img_home1, #img_home2, #img_home3, #img_home4 {
+                              width: 390px;                  
+                        }
+                  }
+            }       
       }
 
       
@@ -386,14 +365,14 @@ aside {
             /* ma version desktop*/            
             @media screen and (min-width: 992px) {
                   aside {
+                        border-left: 2px dashed $greyaround;
+                        border-right: 2px dashed $greyaround;
                         .container_choice {
                               max-width: 1000px;
                               /*align-content: center;*/
+                              .choose {
+                                    margin-bottom: 30px;
+                              }
                         }
-                  }
-
-            
-                  .choose {
-                        margin-bottom: 30px;
                   }
             }
