@@ -19,40 +19,57 @@ $ftsize: 1em;
 
 footer {
       margin: 0 auto;
-      background-color: #000;
+      background-color: #343a40;
       color: #fff;
-      display: flex;
       @include frontiers;
-      text-align: start;
-      padding: 25px;
-      .resume {
-            text-align: start;
-            .partners {
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: flex-start;
-                  align-items: center;
-                  .f_icon {
-                        width: 5%;
-                        font-size: $ftsize;
-                        text-align: right;
-                  }
-            }
-      }
-      .inform {
-            a {
-                  color: #fff;
-            }
-            p {
-                  padding-left: inherit;
+      .container_footer{
+            @include frontiers;
+            padding-left: 8%;
+            padding-right: 10%;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            @media screen and (min-width: 500px) {
+                  width: 35%;          
             }
       }
 }
-footer {
+.resume {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+}
+
+.partners {
+      position: relative;
+      .f_icon {
+            width: 5%;
+            position: absolute;
+            top: 25px;
+      }
+}
+
+  
+.inform {
+      a {
+            color: #fff;
+      }
+      p {
+      padding-left: inherit;
+      }
+}
+
+
+.container_footer {
       h1 {
             font-family: $font-fam_titles;
             display: flex;
             justify-content: flex-start;
+            margin: 0;
+            
+      }
+      h2 {
+            padding-left: 25px;
+            padding-right: 0px;
       }     
 }
 
@@ -64,40 +81,45 @@ footer {
 
 
 
-            /*version tablette*/
-            @media screen and (min-width:768px) {
-                  footer {
+      /*version tablette*/
+      @media screen and (min-width:768px) {
+            footer {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  .container_footer {
+                        display: flex;
+                        flex-direction: column;
                         justify-content: center;
                         align-items: center;
                         text-align: center;
                         border: 2px dashed $greyaround;
-                        h1, .resume {
-                              width: 350px;                              
-                              border-left: 2px dashed $greyaround;
-                              border-right: 2px dashed $greyaround;
-                              justify-content: center;
-                              padding-left: 15px;
-                              padding-right: 15px;
-                              background-color: $greyaround;
-                              color:#000;
-                        }
-                        h1 {
-                              border-top: 2px dashed $greyaround;
-                              margin-bottom: 0;
-                              padding-top: 15px;
-
-                        }
-                        .resume {
-                              border-bottom: 2px dashed $greyaround;
-                              padding-bottom: 15px;
-                        }
                   }
-                  footer {
-                        .inform {
-                              a {
-                                    color: #000;
-                              }
-                        }
-                  }
-            
             }
+            
+             footer h1, .resume {
+                  width: 350px;                              
+                  border-left: 2px dashed $greyaround;
+                  border-right: 2px dashed $greyaround;
+                  justify-content: center;
+                  padding-left: 15px;
+                  padding-right: 15px;
+                  background-color: $greyaround;
+                  color:#343a40;
+            }
+            footer h1 {
+                  border-top: 2px dashed $greyaround;
+                  margin-bottom: 0;
+                  padding-top: 15px;
+
+            }
+            .resume {
+                  border-bottom: 2px dashed $greyaround;
+                  padding-bottom: 15px;
+            }
+            .inform {
+                  a {
+                        color: #343a40;
+                  }
+            }
+      }

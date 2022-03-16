@@ -9,12 +9,13 @@ $tertiary: #99E2D0;
 $ftsize: 1em;
 
 /* mixin*/
+/*
 @mixin museum-setting {
       width: 80%;
       max-width: 350px;
       margin-top: 20px;
       margin-bottom: 20px;     
-}
+} */
 
 @mixin frontiers {
       min-width: 360px;
@@ -27,14 +28,13 @@ $ftsize: 1em;
 
 /*extensions*/
 .button {
-      box-shadow: 0px 5px 10px $greyaround;
+      box-shadow: 1px 5px 15px $greyaround;
       transition: 500ms;
       border-radius: 25px;
       border: 1px solid $greybground;
       &:hover{
-            transform: scale(1.01);
             filter: opacity(70%);           
-            box-shadow: 20px 15px 2px 10px $greyaround;                  
+            box-shadow: 15px 10px 10px #708090;                  
       }
 }
 
@@ -43,14 +43,13 @@ $ftsize: 1em;
  
 /*Ma page d'accueil  hors en tête*/
       /* mobile first*/
-      /*première section - réserver le menu*/
-/*
-body {
-      z-index: 0;
-      .loading {
+      /* loading spinner*/
+.loading{
+            height: 100%;
             margin: auto;
-            margin-top: 100px;
-            margin-bottom: 100px;
+      }
+      .spinner {
+            margin: auto;
             border: 15px solid $tertiary;
             width: 150px;
             height: 150px;      
@@ -60,40 +59,58 @@ body {
             border-right-color: $secondary;
             border-radius: 50%;
             position: fixed;
-            top: 50%;
-            left: 50%;
-            z-index: 2;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            animation: wait 3s linear;
+            opacity: 0;
       }
-      &:hover {
-            background-color: $tertiary;
-            opacity: 0.2;
-            z-index: 1;
-            .loading {
-                  animation: wait 2s alternate;
-                  animation-iteration-count: 1;
-                  }
-                  @keyframes wait {
-                  0% {
+      @keyframes wait {
+            0% {
                   transform: scale(1) rotate(0);
-                  }
-                  50% {
+                  opacity: 1;
+            }
+            50% {
                   transform: scale(1.5) rotate(180deg);
-                  }
-                  100% {
+                  opacity: 1;
+            }
+            100% {
                   transform: scale(1) rotate(360deg);
-                  }
+                  opacity: 0;
             }
       }
+.homepage {
+      animation: opening 3s linear;
+      opacity: 1;
 }
-*/
+@keyframes opening {
+      0% {
+            opacity: 0.2;
+      }
+      50% {
+            opacity: 0.2;
+      }
+      100% {
+            opacity: 1;
+      }
+}
 
-      
+   
 
+            /*première section - réserver le menu*/
+.homepage {
+      max-width: 1300px;
+      margin: 0 auto;
+      font-family: 'Roboto', sans-serif;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style-type: none;
+}
 
 section {
       @include frontiers;
       background-color: $greybground;
-      padding-bottom: 30px;
       .reserve {
       @include frontiers;   
       background-color: $greybground;
@@ -112,6 +129,9 @@ h2 {
       padding-left: 15px;
 }
 
+main section {
+      height: 1200px;
+}
 section {
       #city {
       text-align: center;
@@ -144,20 +164,21 @@ section {
       }
 }
       /*Partie main, sous-partie aside et ensemble container_choice*/
-aside {
+aside, section {
       @include frontiers;
-      .borders {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            padding: 10px 25px;
-            @media screen and (min-width: 500px) {
-                  width: 35%;
-                  text-align: end;            
-            }
+}
+.borders {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      padding: 10px 25px;
+      @media screen and (min-width: 500px) {
+            width: 35%;          
       }
 }
+
 aside {
+      background-color: #fff;
       .container_choice {
             margin: 0 auto;
             width: 80%;
@@ -291,6 +312,7 @@ section {
 
       /*version tablette*/
       @media screen and (min-width:768px) {
+
             section {
                   display: flex;
                   justify-content: center;

@@ -1,6 +1,16 @@
 
 
-
+      .menu_card {  
+            @include frontiers; 
+            @extend .button;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 390px;
+            background-color: #fff;
+            display: flex;
+            margin-bottom: 30px;
+            position: relative;
+      }
       .card_legend {
             width: 75%;
             h3, p {
