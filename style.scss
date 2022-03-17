@@ -1,18 +1,14 @@
-@import 'layout/header';
-/*@import 'layout/footer';*/
-@import 'pages/home';
-/* @import 'pages/lpdg';*/
 
-
-/* variables*/
-/*@import 'utils/variable'; */
-/* mixin*/
-/*@import 'utils/mixin';*/
-/*extensions*/
+                  /*Page principale de style*/
+@import'utils/variable';
+@import 'utils/mixin';
 @import 'utils/extension';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'pages/home';
+@import 'pages/lpdg';
 
-/*Ceci est ma page principale de style*/
-      /*mise en page générale*/
+                  /*mise en page générale*/
 
 body {
       max-width: 1300px;
