@@ -1,15 +1,12 @@
-@import 'utils/variable';
-/*
+                  /*variable*/
 $greyaround: #DCDCDC;
 $greybground: #F2F2F2;
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $ftsize: 1em;
-*/
 
-@import 'utils/mixin';
-/*
+                  /*mixin*/
 @mixin frontiers {
       display: flex;
       flex-direction: column;
@@ -17,9 +14,8 @@ $ftsize: 1em;
       list-style-type: none;
       text-align: center;
 }
-*/
-@import 'utils/extension';
-/*
+
+                  /*extension*/
 .button {
       box-shadow: 1px 5px 15px $greyaround;
       transition: 500ms;
@@ -30,7 +26,7 @@ $ftsize: 1em;
             box-shadow: 15px 10px 10px #708090;                  
       }
 }
-*/
+
                         /*Page d'accueil  hors en tête*/
                         /* mobile first*/
       /* loading spinner*/
@@ -88,22 +84,9 @@ body {
                   opacity: 0;
             }
       }     
-      /*fin animaton*/
+
                   /*première section - réserver le menu*/
       /*mise en page générale*/
-/*
-body {
-      max-width: 1300px;
-      margin: 0 auto;
-      font-family: 'Roboto', sans-serif;
-      box-sizing: border-box;
-      text-decoration: none;
-      list-style-type: none;
-}        
-a:link { 
-      text-decoration:none; 
-}
-*/
 
 .homepage {
       margin: 0 auto;
@@ -176,15 +159,6 @@ aside {
             max-width: 500px;
             @include frontiers;
 }
-/*
-@mixin frontiers {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      list-style-type: none;
-      text-align: center;
-}
-*/
 .choose {
       @extend .button;
       height: 85px;
