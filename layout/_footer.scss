@@ -1,64 +1,42 @@
+/*@import 'utils/variable';*/
 /*couleurs*/
 $greyaround: #DCDCDC;
 $greybground: #F2F2F2;
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
 
 /*tailles de police ou d'icône*/
 $ftsize: 1em;
 
-/*mes mixins*/
+/*@import 'utils/mixin';*/
+/*mixin*/
 @mixin frontiers {
-      min-width: 360px;
+      display: flex;
       flex-direction: column;
       text-decoration: none;
       list-style-type: none;
       text-align: center;
 }
 
-
-/*pieds de pages */
+                  /*pied de page */
 
 footer {
       margin: 0 auto;
       background-color: #343a40;
       color: #fff;
       @include frontiers;
-      .container_footer{
-            @include frontiers;
-            padding-left: 8%;
-            padding-right: 10%;
-            padding-top: 40px;
-            padding-bottom: 40px;
-            @media screen and (min-width: 500px) {
-                  width: 35%;          
-            }
+}
+.container_footer{
+      @include frontiers;
+      padding-left: 8%;
+      padding-right: 10%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      @media screen and (min-width: 500px) {
+            width: 35%;          
       }
 }
-.resume {
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-}
-
-.partners {
-      position: relative;
-      .f_icon {
-            width: 5%;
-            position: absolute;
-            top: 25px;
-      }
-}
-
-  
-.inform {
-      a {
-            color: #fff;
-      }
-      p {
-      padding-left: inherit;
-      }
-}
-
-
 .container_footer {
       h1 {
             font-family: $font-fam_titles;
@@ -70,7 +48,28 @@ footer {
       h2 {
             padding-left: 25px;
             padding-right: 0px;
-      }     
+      }
+}
+.resume {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+}
+.partners {
+      position: relative;
+      .f_icon {
+            width: 5%;
+            position: absolute;
+            top: 25px;
+      }
+}  
+.inform {
+      a {
+            color: #fff;
+      }
+      p {
+      padding-left: inherit;
+      }
 }
 
 
@@ -81,23 +80,22 @@ footer {
 
 
 
-      /*version tablette*/
+                  /*version tablette*/
       @media screen and (min-width:768px) {
             footer {
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  .container_footer {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        text-align: center;
-                        border: 2px dashed $greyaround;
-                  }
             }
-            
-             footer h1, .resume {
+            .container_footer {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  text-align: center;
+                  border: 2px dashed $greyaround;
+            }            
+            footer h1, .resume {
                   width: 350px;                              
                   border-left: 2px dashed $greyaround;
                   border-right: 2px dashed $greyaround;
@@ -111,7 +109,6 @@ footer {
                   border-top: 2px dashed $greyaround;
                   margin-bottom: 0;
                   padding-top: 15px;
-
             }
             .resume {
                   border-bottom: 2px dashed $greyaround;

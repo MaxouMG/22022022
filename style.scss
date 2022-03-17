@@ -1,9 +1,19 @@
+@import 'layout/header';
+/*@import 'layout/footer';*/
 @import 'pages/home';
 /* @import 'pages/lpdg';*/
-@import 'layout/header';
-@import 'layout/footer';
+
+
+/* variables*/
+/*@import 'utils/variable'; */
+/* mixin*/
+/*@import 'utils/mixin';*/
+/*extensions*/
+@import 'utils/extension';
 
 /*Ceci est ma page principale de style*/
+      /*mise en page générale*/
+
 body {
       max-width: 1300px;
       margin: 0 auto;
@@ -11,7 +21,7 @@ body {
       box-sizing: border-box;
       text-decoration: none;
       list-style-type: none;
-}
+}        
 a:link { 
- text-decoration:none; 
+      text-decoration:none; 
 }

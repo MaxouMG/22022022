@@ -1,3 +1,4 @@
+/*@import 'utils/variable';*/
 /*couleurs*/
 $greyaround: #DCDCDC;
 $greybground: #F2F2F2;
@@ -8,64 +9,59 @@ $tertiary: #99E2D0;
 /*tailles de police ou d'icône*/
 $ftsize: 1em;
 
-/* mixin*/
-/*
-@mixin museum-setting {
-      width: 80%;
-      max-width: 350px;
-      margin-top: 20px;
-      margin-bottom: 20px;     
-} */
-
+/*@import 'utils/mixin';*/
+/*mixin*/
 @mixin frontiers {
-      min-width: 360px;
+      display: flex;
       flex-direction: column;
       text-decoration: none;
       list-style-type: none;
       text-align: center;
 }
 
-
-/*extensions*/
-.button {
-      box-shadow: 1px 5px 15px $greyaround;
-      transition: 500ms;
-      border-radius: 25px;
-      border: 1px solid $greybground;
-      &:hover{
-            filter: opacity(70%);           
-            box-shadow: 15px 10px 10px #708090;                  
-      }
-}
-
-
-
- 
-/*Ma page d'accueil  hors en tête*/
-      /* mobile first*/
+                        /*Page d'accueil  hors en tête*/
+                        /* mobile first*/
       /* loading spinner*/
+body {
+      animation: opening 3s linear;
+      opacity: 1;
+}
+      @keyframes opening {
+            0% {
+                  opacity: 0.2;
+            }
+            50% {
+                  opacity: 0.3;
+            }
+            100% {
+                  opacity: 1;
+            }
+      }
+
 .loading{
-            height: 100%;
-            margin: auto;
-      }
-      .spinner {
-            margin: auto;
-            border: 15px solid $tertiary;
-            width: 150px;
-            height: 150px;      
-            border-top-color: $primary;
-            border-bottom-color: $primary;
-            border-left-color: $secondary;
-            border-right-color: $secondary;
-            border-radius: 50%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            animation: wait 3s linear;
-            opacity: 0;
-      }
+      height: 100%;
+      width: 100%;
+      margin: auto;
+}
+.spinner {
+      margin: auto;
+      border: 15px solid $greyaround;
+      width: 150px;
+      height: 150px;      
+      border-top-color: $primary;
+      border-bottom-color: $primary;
+      border-left-color: $secondary;
+      border-right-color: $secondary;
+      border-radius: 50%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      animation: wait 3s linear;
+      opacity: 0;
+      z-index: 2;
+}
       @keyframes wait {
             0% {
                   transform: scale(1) rotate(0);
@@ -79,93 +75,80 @@ $ftsize: 1em;
                   transform: scale(1) rotate(360deg);
                   opacity: 0;
             }
-      }
-.homepage {
-      animation: opening 3s linear;
-      opacity: 1;
-}
-@keyframes opening {
-      0% {
-            opacity: 0.2;
-      }
-      50% {
-            opacity: 0.2;
-      }
-      100% {
-            opacity: 1;
-      }
-}
-
-   
-
-            /*première section - réserver le menu*/
-.homepage {
+      }     
+      /*fin animaton*/
+                  /*première section - réserver le menu*/
+      /*mise en page générale*/
+/*
+body {
       max-width: 1300px;
       margin: 0 auto;
       font-family: 'Roboto', sans-serif;
       box-sizing: border-box;
       text-decoration: none;
       list-style-type: none;
+}        
+a:link { 
+      text-decoration:none; 
 }
+*/
 
-section {
+.homepage {
+      margin: 0 auto;
+}
+section, aside {
       @include frontiers;
+}
+                  /* première section avec reserve #aroundme et explore */
+section {
       background-color: $greybground;
-      .reserve {
+}
+.reserve {
       @include frontiers;   
       background-color: $greybground;
-      display: flex;
       flex-direction: column;
-            #aroundme {
-                  width: 100%;
-                  background-color: $greyaround;
-                  padding-top: 10px;
-                  padding-bottom: 10px; 
-            }
+}
+#aroundme {
+      width: 100%;
+      background-color: $greyaround;
+      padding-top: 10px;
+      padding-bottom: 10px; 
+      h2 {
+            padding-right: 15px;
+            padding-left: 15px;
       }
 }
-h2 {
-      padding-right: 15px;
-      padding-left: 15px;
-}
-
-main section {
-      height: 1200px;
-}
-section {
-      #city {
+#city {
       text-align: center;
       margin-right: 0;
       margin-left: 0;
       border: none;
       background-color: $greyaround;
-      }
 }
-section {
-      #explore1 {
+#explore1 {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-            .explore2 {
-                  @extend .button;
-                  width: 250px;
-                  height: 35px;
-                  background: linear-gradient(355deg, $primary 30%, $secondary 70%);
-                  color:#fff;
-                  padding-top: 20px;
-                  margin-top: 25px;
-                  margin-bottom: 25px;
-                  }
-            p {
-                  padding-right: 15px;
-                  padding-left: 15px;
-            }
+      flex-direction: column;      
+      p {
+            padding-right: 15px;
+            padding-left: 15px;
+      }
+      .explore2 {
+            @extend .button;
+            width: 250px;
+            height: 35px;
+            background: linear-gradient(355deg, $primary 30%, $secondary 70%);
+            color:#fff;
+            padding-top: 20px;
+            margin-top: 25px;
+            margin-bottom: 25px;
       }
 }
-      /*Partie main, sous-partie aside et ensemble container_choice*/
-aside, section {
-      @include frontiers;
+                 /*Partie main, sous-partie aside le H2 en .borders et l'ensemble container_choice*/
+
+aside {
+      background-color: #fff;
 }
 .borders {
       display: flex;
@@ -176,68 +159,78 @@ aside, section {
             width: 35%;          
       }
 }
-
-aside {
-      background-color: #fff;
-      .container_choice {
+.container_choice {
             margin: 0 auto;
-            width: 80%;
             max-width: 500px;
+            @include frontiers;
+}
+/*
+@mixin frontiers {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      list-style-type: none;
+      text-align: center;
+}
+*/
+.choose {
+      @extend .button;
+      height: 85px;
+      width: 280px;
+      display: flex;
+      align-items: center;
+      background: $greybground;
+      margin-bottom: 30px;
+      position: relative;
+      left: 10px;
+      &:hover{
+            background-color: lighten($primary,30%);
       }
-      .choose {
-            @extend .button;
-            height: 85px;
-            display: flex;
-            align-items: center;
-            background: $greybground;
-            margin-bottom: 30px;
-            position: relative;
-            &:hover{
-                  background-color: lighten($primary,30%);
-            }
-      }
-      .number{
-            position: absolute;
-            right: 95%;
-            p{
-                  width: 30px;
-                  height: 30px;
-                  line-height: 30px;
-                  text-align: center;
-                  background-color: $primary;
-                  color: #fff;
-                  border: 1px solid $primary;
-                  border-radius: 50%;
-            }
-      }
-      .picture {
-            width: 15%;
-            font-size: $ftsize;
-            text-align: right;
-            &:hover{
-                  color: $primary;
-            }
+      @media screen and (min-width: 415px) {
+            width: 350px;          
       }
 }
-h3 {
+.number{
+      position: absolute;
+      right: 95%;
+      p {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            background-color: $primary;
+            color: #fff;
+            border: 1px solid $primary;
+            border-radius: 50%;
+      }
+}
+.picture {
+      width: 15%;
+      font-size: $ftsize;
+      text-align: right;
+      &:hover{
+            color: $primary;
+      }
+}
+.choose h3 {
       padding-left: 5%;
-      font-weight: bold;
 }
+                  /* partie main section avec cards et animation heart-icon*/
 
-      /* partie main section avec cards*/
-/*section */
-section {
-      .menu_card {  
-            @include frontiers; 
-            @extend .button;
-            margin: 0 auto;
-            width: 80%;
-            max-width: 390px;
-            background-color: #fff;
-            display: flex;
-            margin-bottom: 30px;
-            position: relative;
-      }
+main section  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+} 
+.menu_card {  
+      @include frontiers; 
+      @extend .button;
+      margin: 0 auto;
+      width: 80%;
+      max-width: 390px;
+      background-color: #fff;
+      display: flex;
+      margin-bottom: 30px;
       #img_home1, #img_home2, #img_home3, #img_home4 {
             width: 100%;
             max-height: 160px;
@@ -245,61 +238,99 @@ section {
             border-top-right-radius: 20px;
             border-top-left-radius: 20px;
       }
-      .icon-legend {
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: center;
-            color:#000;
+}
+.icon-legend {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-end;
+      color:#000;
+      position: relative;
+}
+.heart-icon1, .heart-icon2 {
+      width: 50px;
+      height: 50px;
+      text-align: right;
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      .far.fa-heart, .fas.fa-heart{
+            width: 43px;
+            height: 43px;
+            font-size: $ftsize+1.5em;
       }
-      .card_legend {
-            width: 75%;
+      .far.fa-heart {
+            color: #000;
+      }
+}
+.heart-icon2 {
+      opacity: 0;
+      &:hover {
+            animation: scale-up-ver-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            }
+}
+      @keyframes scale-up-ver-center {
+            0% {
+                  color: #FF79DA; 
+                  transform: scaleY(0.4);
+                  opacity: 0.4;
+
+            }
+            25% {
+                  color:#FF79DA;
+                  transform: scaleY(0.5);
+                  opacity: 0.6;
+            }
+            50% {
+                  color: #9356DC;
+                  transform: scaleY(0.7);
+                  opacity: 0.8;
+                  }
+            80% {
+                  color: #9356DC;
+                  transform: scaleY(1);
+                  opacity: 1; 
+            }
+            100% {
+                  color: #9356DC;
+                  transform: scaleY(1);
+                  opacity: 0;
+            }
+      }
+
+.card_legend {
+            width: 65%;
             h3, p {
-            text-align: left;
-            padding-left: 5%;
+                  text-align: left;
+                  padding-left: 5%;
             }
             h3 {
-            margin-bottom: 0;
+                  margin-bottom: 0;
             }
             p {
-            margin-top: 0;
+                  margin-top: 0;
             }
-      }
-      .heart-icon {
-            text-align: right;
-            width: 50%;
-            color: #000;
-            font-size: $ftsize+1em;
+}
+                  /* encadré nouveau*/
+.menu_card{
+      position: relative;
+      .new {
+            width: fit-content;
+            border: 1px solid darken($tertiary,30%);
+            border-radius: 5px;
+            color: darken($tertiary,30%);
+            background-color: $tertiary;
+            box-shadow: 2px 2px 5px darken($greyaround, 30%);
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
             padding-right: 15px;
-      }
-}
-      /* et a la fin je remplis ce coeur*/
-            /* &:hover {
-      
-
-      }*/
-
-      /* encadré nouveau*/
-section {
-      .menu_card{
-            .new {
-                  width: fit-content;
-                  border: 1px solid darken($tertiary,30%);
-                  border-radius: 5px;
-                  color: darken($tertiary,30%);
-                  background-color: $tertiary;
-                  box-shadow: 2px 2px 5px darken($greyaround, 30%);
-                  font-weight: bold;
-                  padding-top: 10px;
-                  padding-bottom: 10px;
-                  padding-right: 15px;
-                  padding-left: 15px;
-                  position: absolute;
-                  top: 20px;
-                  right: 20px;            
+            padding-left: 15px;
+            position: absolute;
+            top: 20px;
+            right: 20px;            
             }
       }
-}
 
 
 
@@ -310,72 +341,65 @@ section {
 
 
 
-      /*version tablette*/
+            /*version tablette*/
       @media screen and (min-width:768px) {
-
+                  /* première section avec reserve #aroundme et explore */
             section {
                   display: flex;
                   justify-content: center;
                   align-items: center;  
                   text-align: center;
                   background-color: $greybground;
-                  padding-bottom: 5px;           
-                  .reserve {
-                        width: 550px;                
-                        background-color: #fff;           
-                        border-bottom-right-radius: 20px;
-                        border-bottom-left-radius: 20px;
-                  }      
-                  #aroundme, #explore1 {
-                        border-top-right-radius: 20px;
-                        border-top-left-radius: 20px;
-                  }
+                  padding-bottom: 5px;
+            }           
+            .reserve {
+                  width: 550px;                
+                  background-color: #fff;           
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
+            }      
+            #aroundme, #explore1 {
+                  border-top-right-radius: 20px;
+                  border-top-left-radius: 20px;
             }
-
-      /*Partie main, sous-partie aside et ensemble container_choice*/
+                  /*Partie main, sous-partie aside le H2 en .borders et l'ensemble container_choice*/
             aside, section {
                   .borders {
                         width: 100%;
                         text-align: center;
                   }
             }
-            aside {
-                  .container_choice{
-                        width: inherit;
-                        max-width: none;
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        justify-content: center;
-                  }
-                  a {
-                        margin-right: 10%;
-                  }
-                  .choose {
-                        width: 40%;
-                        padding-right: 0px;
-                        padding-left: 0px;
-                        margin-right: 20px;
-                        margin-left: 20px;
-                  }
-            }           
-      /* partie main section avec cards*/
+            .container_choice{
+                  width: inherit;
+                  max-width: none;
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap;
+                  justify-content: center;
+            }
+            .choose {
+                  width: 40%;
+                  padding-right: 0px;
+                  padding-left: 0px;
+                  margin-right: 20px;
+                  margin-left: 20px;
+            }
+            
+                  /* partie main section avec cards et animation heart-icon*/
             main section {
                   max-width: none;
                   flex-direction: row;
                   flex-wrap: wrap;
-                  .menu_card{
-                        margin-left: 15px;
-                        margin-right: 15px;
-                        #img_home1, #img_home2, #img_home3, #img_home4 {
-                              width: 390px;                  
-                        }
+            }
+            .menu_card{
+                  margin-left: 15px;
+                  margin-right: 15px;
+                  #img_home1, #img_home2, #img_home3, #img_home4 {
+                        width: 390px;                  
                   }
-            }       
+            }
       }
 
-      
-   
 
 
 
@@ -384,17 +408,17 @@ section {
 
 
 
-            /* ma version desktop*/            
+                  /* version desktop*/            
             @media screen and (min-width: 992px) {
                   aside {
                         border-left: 2px dashed $greyaround;
                         border-right: 2px dashed $greyaround;
-                        .container_choice {
-                              max-width: 1000px;
-                              /*align-content: center;*/
-                              .choose {
-                                    margin-bottom: 30px;
-                              }
-                        }
+                  }
+                  .container_choice {
+                        max-width: 1000px;
+                  }
+                  .choose {
+                        margin-bottom: 30px;
                   }
             }
+      
