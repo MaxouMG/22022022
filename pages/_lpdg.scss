@@ -29,8 +29,44 @@ $ftsize: 1em;
 
                   /*le palais du goût*/
       /*version mobile*/
+                  /* règle présentation générale */
+.lpdgpage {
+      margin: 0 auto;
+}
+section, article {
+      @include frontiers;
+}
+                  /*première section avec h1 img et icone coeur*/
+.lpdgpage section {
+      background-color: #fff;
+}
+#img_home1, #img_home2, #img_home3, #img_home4 {
+      width: 100%;
+      max-height: 160px;
+      object-fit: cover;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+}
+h1 {
+      font-family: $font-fam_titles;
+      position: relative;
+}
+.heart-icon1 {
+      width: 50px;
+      height: 50px;
+      text-align: right;
+      position: absolute;
+      top: 260px;
+      right: 5px;
+      .far.fa-heart {
+            width: 43px;
+            height: 43px;
+            font-size: $ftsize+1.5em;
+      }
+}
+
+      /*partie article avec starters */
 .menu_card {  
-      /*revoir les règles de menu_card*/
       @include frontiers; 
       @extend .button;
       margin: 0 auto;
@@ -39,19 +75,17 @@ $ftsize: 1em;
       background-color: #fff;
       display: flex;
       margin-bottom: 30px;
-      position: relative;
 }
 .card_legend {
-      /*revoir les règles de card_legend*/
-      width: 75%;
+      width: 65%;
       h3, p {
             text-align: left;
             padding-left: 5%;
-            }
-            h3 {
-            margin-bottom: 0;
-            }
-            p {
-            margin-top: 0;
-            }
       }
+      h3 {
+            margin-bottom: 0;
+      }
+      p {
+            margin-top: 0;
+      }
+}

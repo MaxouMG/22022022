@@ -1,31 +1,3 @@
-                  /*variable*/
-$greyaround: #DCDCDC;
-$greybground: #F2F2F2;
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
-$ftsize: 1em;
-                  
-                  /*mixin*/
-@mixin frontiers {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      list-style-type: none;
-      text-align: center;
-}
-                  
-                  /*extension*/
-.button {
-      box-shadow: 1px 5px 15px $greyaround;
-      transition: 500ms;
-      border-radius: 25px;
-      border: 1px solid $greybground;
-      &:hover{
-            filter: opacity(70%);           
-            box-shadow: 15px 10px 10px #708090;                  
-      }
-}
 
                   /*pied de page */
 
