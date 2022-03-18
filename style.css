@@ -21,23 +21,6 @@ header {
 
 /*variable*/
 /*mixin*/
-/*extension*/
-.button, #explore1 .explore2, .choose, .menu_card {
-  -webkit-box-shadow: 1px 5px 15px #DCDCDC;
-          box-shadow: 1px 5px 15px #DCDCDC;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-  border-radius: 25px;
-  border: 1px solid #F2F2F2;
-}
-
-.button:hover, #explore1 .explore2:hover, .choose:hover, .menu_card:hover {
-  -webkit-filter: opacity(70%);
-          filter: opacity(70%);
-  -webkit-box-shadow: 15px 10px 10px #708090;
-          box-shadow: 15px 10px 10px #708090;
-}
-
 /*pied de page */
 footer {
   margin: 0 auto;
@@ -784,6 +767,7 @@ main section {
 /* règle présentation générale */
 .lpdgpage {
   margin: 0 auto;
+  max-width: 1300px;
 }
 
 section, article {
@@ -800,8 +784,22 @@ section, article {
 }
 
 /*première section avec h1 img et icone coeur*/
-.lpdgpage section {
+.lpdgpage section, .title {
   background-color: #fff;
+  height: 200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lpdgpage {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #img_home1, #img_home2, #img_home3, #img_home4 {
@@ -811,11 +809,26 @@ section, article {
      object-fit: cover;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
+  position: relative;
 }
 
-h1 {
+.title {
+  max-width: 1300px;
+  /*à cause de position: absolute;*/
+  background-color: #F2F2F2;
+  border: 1px solid;
+  border-bottom-color: transparent;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  position: absolute;
+  top: 225px;
+}
+
+.title h1 {
   font-family: "Shrikhand", cursive;
-  position: relative;
+  width: 70%;
+  /* position: relative;
+      text-align: start;*/
 }
 
 .heart-icon1 {
@@ -823,8 +836,6 @@ h1 {
   height: 50px;
   text-align: right;
   position: absolute;
-  top: 260px;
-  right: 5px;
 }
 
 .heart-icon1 .far.fa-heart {
@@ -833,7 +844,17 @@ h1 {
   font-size: 2.5em;
 }
 
-/*partie article avec starters */
+/*partie main puis article avec starters */
+main {
+  margin-top: 15px;
+}
+
+h4 {
+  text-transform: uppercase;
+  text-align: start;
+  padding-left: 25px;
+}
+
 .menu_card {
   display: -webkit-box;
   display: -ms-flexbox;
