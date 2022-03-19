@@ -1,7 +1,9 @@
 @charset "UTF-8";
 /*Page principale de style*/
+/*couleurs*/
+/*polices icones en particulier*/
+/*police spéciale logo et titres*/
 /* en-tête de page*/
-/*police d'écriture spéciale logo et titres*/
 header {
   margin: 0 auto;
 }
@@ -19,7 +21,6 @@ header {
       align-content: center;
 }
 
-/*variable*/
 /*mixin*/
 /*pied de page */
 footer {
@@ -162,7 +163,6 @@ footer {
   }
 }
 
-/*variable*/
 /*mixin*/
 /*extension*/
 .button, #explore1 .explore2, .choose, .menu_card {
@@ -743,7 +743,6 @@ main section {
   }
 }
 
-/*variable*/
 /*mixin*/
 /*extension*/
 .button, #explore1 .explore2, .choose, .menu_card {
