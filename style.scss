@@ -2,6 +2,7 @@
                   /*Page principale de style*/
 
 @import'./utils/variable';
+@import './utils/mixin';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'pages/home';

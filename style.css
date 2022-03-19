@@ -21,7 +21,6 @@ header {
       align-content: center;
 }
 
-/*mixin*/
 /*pied de page */
 footer {
   margin: 0 auto;
@@ -163,7 +162,6 @@ footer {
   }
 }
 
-/*mixin*/
 /*extension*/
 .button, #explore1 .explore2, .choose, .menu_card {
   -webkit-box-shadow: 1px 5px 15px #DCDCDC;
@@ -743,7 +741,6 @@ main section {
   }
 }
 
-/*mixin*/
 /*extension*/
 .button, #explore1 .explore2, .choose, .menu_card {
   -webkit-box-shadow: 1px 5px 15px #DCDCDC;
@@ -767,9 +764,6 @@ main section {
 .lpdgpage {
   margin: 0 auto;
   max-width: 1300px;
-}
-
-section, article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -780,19 +774,25 @@ section, article {
   text-decoration: none;
   list-style-type: none;
   text-align: center;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /*première section avec h1 img et icone coeur*/
 .lpdgpage section, .title {
   background-color: #fff;
-  height: 200px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.lpdgpage {
+.lpdgpage, .lpdgpage section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -803,7 +803,8 @@ section, article {
 
 #img_home1, #img_home2, #img_home3, #img_home4 {
   width: 100%;
-  max-height: 160px;
+  max-width: 500px;
+  height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-right-radius: 20px;
@@ -812,40 +813,33 @@ section, article {
 }
 
 .title {
-  max-width: 1300px;
-  /*à cause de position: absolute;*/
+  max-width: 500px;
   background-color: #F2F2F2;
-  border: 1px solid;
+  border: 1px solid #F2F2F2;
   border-bottom-color: transparent;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   position: absolute;
-  top: 225px;
+  top: 350px;
 }
 
 .title h1 {
   font-family: "Shrikhand", cursive;
-  width: 70%;
-  /* position: relative;
-      text-align: start;*/
+  width: 75%;
+  max-width: 335px;
+  position: relative;
 }
 
 .heart-icon1 {
-  width: 50px;
-  height: 50px;
-  text-align: right;
-  position: absolute;
-}
-
-.heart-icon1 .far.fa-heart {
-  width: 43px;
-  height: 43px;
-  font-size: 2.5em;
+  top: 15px;
+  right: 35px;
 }
 
 /*partie main puis article avec starters */
 main {
-  margin-top: 15px;
+  width: 100%;
+  padding-top: 25px;
+  background-color: #F2F2F2;
 }
 
 h4 {
@@ -867,14 +861,9 @@ h4 {
   text-align: center;
   margin: 0 auto;
   width: 80%;
-  max-width: 390px;
   background-color: #fff;
   display: flex;
   margin-bottom: 30px;
-}
-
-.card_legend {
-  width: 65%;
 }
 
 .card_legend h3, .card_legend p {

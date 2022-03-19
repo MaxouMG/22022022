@@ -1,12 +1,4 @@
-   
-                  /*mixin*/
-@mixin frontiers {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      list-style-type: none;
-      text-align: center;
-}
+
                   
                   /*extension*/
 .button {
@@ -26,64 +18,60 @@
 .lpdgpage {
       margin: 0 auto;
       max-width: 1300px;
-}
-section, article {
       @include frontiers;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
 }
                   /*première section avec h1 img et icone coeur*/
 .lpdgpage section, .title {
       background-color: #fff;
-      height: 200px;
       width: 100%;
       display: flex;
 }
-.lpdgpage {
+.lpdgpage, .lpdgpage section {
       justify-content: center;
       align-items: center;
 }
-
 #img_home1, #img_home2, #img_home3, #img_home4 {
       width: 100%;
-      max-height: 160px;
+      max-width: 500px;
+      height: 350px;
       object-fit: cover;
       border-top-right-radius: 20px;
       border-top-left-radius: 20px;
       position: relative;
 }
 .title {
-      max-width: 1300px;
-      /*à cause de position: absolute;*/
+      max-width: 500px;
       background-color: $greybground;
-      border: 1px solid;
+      border: 1px solid $greybground;
       border-bottom-color: transparent;
       border-top-right-radius: 20px;
       border-top-left-radius: 20px;
       position: absolute;
-      top: 225px;
+      top: 350px;
 
 }
 .title h1 {
       font-family: $font-fam_titles;
-      width: 70%;
-     /* position: relative;
-      text-align: start;*/
+      width: 75%;
+      max-width: 335px;
+      position: relative;
 }
 .heart-icon1 {
-      width: 50px;
-      height: 50px;
-      text-align: right;
-      position: absolute;
-      .far.fa-heart {
-            width: 43px;
-            height: 43px;
-            font-size: $ftsize+1.5em;
-      }
+      top: 15px;
+      right: 35px;
 }
 
       /*partie main puis article avec starters */
 main {
-      margin-top: 15px;
-}      
+      width: 100%;
+      padding-top: 25px;
+      background-color: $greybground;
+}
+
 h4 {
       text-transform: uppercase;
       text-align: start;
@@ -94,13 +82,13 @@ h4 {
       @extend .button;
       margin: 0 auto;
       width: 80%;
-      max-width: 390px;
+      // max-width: 390px;
       background-color: #fff;
       display: flex;
       margin-bottom: 30px;
 }
 .card_legend {
-      width: 65%;
+      // width: 65%;
       h3, p {
             text-align: left;
             padding-left: 5%;
