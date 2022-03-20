@@ -1,17 +1,4 @@
 
-                  
-                  /*extension*/
-.button {
-      box-shadow: 1px 5px 15px $greyaround;
-      transition: 500ms;
-      border-radius: 25px;
-      border: 1px solid $greybground;
-      &:hover{
-            filter: opacity(70%);           
-            box-shadow: 15px 10px 10px #708090;                  
-      }
-}
-
                   /*le palais du goût*/
       /*version mobile*/
                   /* règle présentation générale */
@@ -66,37 +53,52 @@
 }
 
       /*partie main puis article avec starters */
-main {
+.lpdgpage main {
       width: 100%;
-      padding-top: 25px;
+      max-width: 500px;
       background-color: $greybground;
 }
-
+article {
+      margin-top: 40px;
+}
 h4 {
       text-transform: uppercase;
       text-align: start;
       padding-left: 25px;
+      margin-top: 0;
+      margin-bottom: 0;
 }
-.menu_card {  
-      @include frontiers; 
-      @extend .button;
+.underline {
+      border: 2px solid $tertiary;
+      width: 35px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      margin-left: 25px;
+
+}
+article .menu_card {
+      width: 90%;
+      max-width: none;
       margin: 0 auto;
-      width: 80%;
-      // max-width: 390px;
       background-color: #fff;
       display: flex;
+      flex-direction: row;
       margin-bottom: 30px;
 }
 .card_legend {
-      // width: 65%;
+      width: 70%;
       h3, p {
             text-align: left;
-            padding-left: 5%;
       }
-      h3 {
-            margin-bottom: 0;
-      }
+}
+.price {
+      width: 30%;
+      font-weight: bold;
       p {
-            margin-top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 50%;
       }
+
 }

@@ -3,6 +3,22 @@
 /*couleurs*/
 /*polices icones en particulier*/
 /*police spéciale logo et titres*/
+.button, #explore1 .explore2, .choose, .menu_card {
+  -webkit-box-shadow: 1px 5px 15px #DCDCDC;
+          box-shadow: 1px 5px 15px #DCDCDC;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 25px;
+  border: 1px solid #F2F2F2;
+}
+
+.button:hover, #explore1 .explore2:hover, .choose:hover, .menu_card:hover {
+  -webkit-filter: opacity(70%);
+          filter: opacity(70%);
+  -webkit-box-shadow: 15px 10px 10px #708090;
+          box-shadow: 15px 10px 10px #708090;
+}
+
 /* en-tête de page*/
 header {
   margin: 0 auto;
@@ -160,23 +176,6 @@ footer {
   .inform a {
     color: #343a40;
   }
-}
-
-/*extension*/
-.button, #explore1 .explore2, .choose, .menu_card {
-  -webkit-box-shadow: 1px 5px 15px #DCDCDC;
-          box-shadow: 1px 5px 15px #DCDCDC;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-  border-radius: 25px;
-  border: 1px solid #F2F2F2;
-}
-
-.button:hover, #explore1 .explore2:hover, .choose:hover, .menu_card:hover {
-  -webkit-filter: opacity(70%);
-          filter: opacity(70%);
-  -webkit-box-shadow: 15px 10px 10px #708090;
-          box-shadow: 15px 10px 10px #708090;
 }
 
 /*Page d'accueil  hors en tête*/
@@ -741,23 +740,6 @@ main section {
   }
 }
 
-/*extension*/
-.button, #explore1 .explore2, .choose, .menu_card {
-  -webkit-box-shadow: 1px 5px 15px #DCDCDC;
-          box-shadow: 1px 5px 15px #DCDCDC;
-  -webkit-transition: 500ms;
-  transition: 500ms;
-  border-radius: 25px;
-  border: 1px solid #F2F2F2;
-}
-
-.button:hover, #explore1 .explore2:hover, .choose:hover, .menu_card:hover {
-  -webkit-filter: opacity(70%);
-          filter: opacity(70%);
-  -webkit-box-shadow: 15px 10px 10px #708090;
-          box-shadow: 15px 10px 10px #708090;
-}
-
 /*le palais du goût*/
 /*version mobile*/
 /* règle présentation générale */
@@ -836,47 +818,71 @@ main section {
 }
 
 /*partie main puis article avec starters */
-main {
+.lpdgpage main {
   width: 100%;
-  padding-top: 25px;
+  max-width: 500px;
   background-color: #F2F2F2;
+}
+
+article {
+  margin-top: 40px;
 }
 
 h4 {
   text-transform: uppercase;
   text-align: start;
   padding-left: 25px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.menu_card {
+.underline {
+  border: 2px solid #99E2D0;
+  width: 35px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+
+article .menu_card {
+  width: 90%;
+  max-width: none;
+  margin: 0 auto;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-decoration: none;
-  list-style-type: none;
-  text-align: center;
-  margin: 0 auto;
-  width: 80%;
-  background-color: #fff;
-  display: flex;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-bottom: 30px;
+}
+
+.card_legend {
+  width: 70%;
 }
 
 .card_legend h3, .card_legend p {
   text-align: left;
-  padding-left: 5%;
 }
 
-.card_legend h3 {
-  margin-bottom: 0;
+.price {
+  width: 30%;
+  font-weight: bold;
 }
 
-.card_legend p {
-  margin-top: 0;
+.price p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 50%;
 }
 
 /*mise en page générale*/
