@@ -22,6 +22,24 @@
 /* en-tête de page*/
 header {
   margin: 0 auto;
+  text-decoration: none;
+}
+
+.h_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -35,6 +53,14 @@ header {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+nav a {
+  font-size: 1.5em;
+  color: #000;
+  position: absolute;
+  right: 240px;
+  top: 25px;
 }
 
 /*pied de page */
@@ -181,7 +207,7 @@ footer {
 /*Page d'accueil  hors en tête*/
 /* mobile first*/
 /* loading spinner*/
-body {
+.homepage {
   -webkit-animation: opening 3s linear;
           animation: opening 3s linear;
   opacity: 1;
