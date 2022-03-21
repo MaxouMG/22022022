@@ -2,12 +2,10 @@
                   /*le palais du goût*/
       /*version mobile*/
                   /* règle présentation générale */
-// body {
-      // animation: none;
-// }
+
 .lpdgpage {
       margin: 0 auto;
-      max-width: 1300px;
+      max-width: 1000px;
       @include frontiers;
       display: flex;
       justify-content: center;
@@ -23,14 +21,13 @@
 .lpdgpage, .lpdgpage section {
       justify-content: center;
       align-items: center;
+      padding-bottom: 0;
 }
 #img_home1, #img_home2, #img_home3, #img_home4 {
       width: 100%;
       max-width: 500px;
       height: 350px;
       object-fit: cover;
-      border-top-right-radius: 20px;
-      border-top-left-radius: 20px;
       position: relative;
 }
 .title {
@@ -61,9 +58,35 @@
       max-width: 500px;
       background-color: $greybground;
 }
-article {
-      margin-top: 40px;
+.starters {
+      animation: slide-bottom 2s linear 1s both;
+      opacity: 1;
+
 }
+@keyframes slide-bottom {
+      0% {
+            transform: translateY(0);
+            opacity: 0;
+      }
+      50% {
+            transform: translateY(25px);
+            opacity: 0.5;
+      }
+      100% {
+            transform: translateY(50px);
+            opacity: 1;
+      }
+}
+.dishes {
+      animation: slide-bottom 2s linear 3s both;
+      opacity: 1;
+}
+.desserts {
+      animation: slide-bottom 2s linear 5s both;
+      opacity: 1;
+      margin-bottom: 100px;
+}
+    
 h4 {
       text-transform: uppercase;
       text-align: start;
@@ -73,6 +96,7 @@ h4 {
 }
 .underline {
       border: 2px solid $tertiary;
+      background-color: $tertiary;
       width: 35px;
       margin-top: 5px;
       margin-bottom: 15px;
@@ -105,3 +129,46 @@ article .menu_card {
       }
 
 }
+
+
+
+
+
+
+
+
+
+
+                              /*version tablette*/
+      @media screen and (min-width:768px) {
+            .title {
+                  background-color: #fff;
+                  border-style: dashed;
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
+            }
+            .lpdgpage section {
+                  background-color: $greybground;
+
+            }             
+            #img_home1, #img_home2, #img_home3, #img_home4 {
+                  height: 335px;
+                  border-top-right-radius: 20px;
+                  border-top-left-radius: 20px;
+            }
+            .lpdgpage main {
+                  width: 100%;
+                  max-width: none;
+                  background: linear-gradient(45deg, rgba(147,86,220,1) 40%, rgba(242,242,242,1) 60%);
+            }
+            article .menu_card {
+                  width: 500px;
+            }
+
+
+
+
+
+
+
+      }
