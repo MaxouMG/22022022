@@ -13,12 +13,8 @@
 
 }
                   /*première section avec h1 img et icone coeur*/
-.lpdgpage section, .title {
-      background-color: #fff;
-      width: 100%;
-      display: flex;
-}
-.lpdgpage, .lpdgpage section {
+
+.lpdgpage, .lpdgpage .title {
       justify-content: center;
       align-items: center;
       padding-bottom: 0;
@@ -30,13 +26,16 @@
       object-fit: cover;
       position: relative;
 }
-.title {
+.title {      
+      width: 100%;      
       max-width: 500px;
       background-color: $greybground;
+      text-align: left;
       border: 1px solid $greybground;
       border-bottom-color: transparent;
       border-top-right-radius: 20px;
       border-top-left-radius: 20px;
+      display: flex;
       position: absolute;
       top: 350px;
 
@@ -48,7 +47,7 @@
       position: relative;
 }
 .heart-icon1 {
-      top: 15px;
+      top: 20px;
       right: 35px;
 }
 
@@ -146,11 +145,7 @@ article .menu_card {
                   border-style: dashed;
                   border-bottom-right-radius: 20px;
                   border-bottom-left-radius: 20px;
-            }
-            .lpdgpage section {
-                  background-color: $greybground;
-
-            }             
+            }            
             #img_home1, #img_home2, #img_home3, #img_home4 {
                   height: 335px;
                   border-top-right-radius: 20px;
@@ -164,11 +159,13 @@ article .menu_card {
             article .menu_card {
                   width: 500px;
             }
-
-
-
-
-
-
+            main #explore1 {
+                  background-color: $greybground;
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
+                  margin-bottom: 5px;
+                  margin-left: 5px;
+                  margin-right: 5px;
+            }
 
       }
