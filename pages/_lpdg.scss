@@ -6,61 +6,66 @@
 .lpdgpage {
       margin: 0 auto;
       max-width: 1000px;
-      @include frontiers;
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-
 }
-                  /*première section avec h1 img et icone coeur*/
+                  /*première section avec titre page img et icone coeur*/
 
-.lpdgpage .title {
+.title {
+      display: flex;
       justify-content: center;
       align-items: center;
-      padding-bottom: 0;
 }
 #img_home1, #img_home2, #img_home3, #img_home4 {
-      width: 100%;
       max-width: 500px;
       height: 350px;
       object-fit: cover;
       position: relative;
 }
-.title {      
-      width: 100%;      
+.legend {
+      width: 100%;
+      min-width: 410px;
       max-width: 500px;
+      height: 100px;
+      display: flex;
+      align-items: center;
       background-color: $greybground;
-      text-align: left;
-      border: 1px solid $greybground;
-      border-bottom-color: transparent;
       border-top-right-radius: 20px;
       border-top-left-radius: 20px;
-      display: flex;
       position: absolute;
       top: 350px;
-
 }
-.title h1 {
+.text2 {
+      width: 330px;
       font-family: $font-fam_titles;
-      width: 75%;
-      max-width: 335px;
-      position: relative;
+      font-size: 2*$ftsize;
+      padding-left: 20px;
+      margin: 0.67em 0;      
 }
-.heart-icon1 {
-      top: 20px;
-      right: 35px;
+.legend {
+      .hearts {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+      }
+      .fas.fa-heart {
+            width: 50px;
+            position: absolute;
+            right: -62px;
+      }
 }
 
-      /*partie main puis article avec starters */
+      /*partie main puis article avec starters ... */
+
 .lpdgpage main {
       width: 100%;
-      max-width: 500px;
       background-color: $greybground;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 }
 .starters {
       animation: slide-bottom 2s linear 1s both;
       opacity: 1;
-
 }
 @keyframes slide-bottom {
       0% {
@@ -85,7 +90,7 @@
       opacity: 1;
       margin-bottom: 100px;
 }
-    
+   
 h4 {
       text-transform: uppercase;
       text-align: start;
@@ -102,51 +107,47 @@ h4 {
       margin-left: 25px;
 
 }
-article .menu_card {
-      width: 90%;
-      max-width: none;
-      margin: 0 auto;
+article {
+      width: 350px;
+}
+.card {
+      @extend .button;
+      border-radius: 30px;
+      height: 80px;
+      max-width: 500px;
       background-color: #fff;
       display: flex;
-      // flex-direction: row;
-      margin-bottom: 30px;
+      justify-content: space-around;
+      align-items: center;
+      margin: 25px 0;
 }
 .card_legend {
-      width: 70%;
+      width: 80%;
       h3, p {
-            text-align: left;
+            margin: 0;
+            padding-left: 15px;
       }
 }
 .price {
-      width: 30%;
+      width: 10%;
       font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: flex-end;
             height: 50%;
 }
-
-.d1 {
-      display: flex;
-      align-items: center;
-      height: 70px;
-      border-radius: 20px;
-      box-shadow:3px 3px 10px #000 ;
-}
-.d2 {
-      flex-grow: 1;
-}
 .okay {
-      width: 0px;
-      height: 70px;
-      background-color: $tertiary;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      border-radius: 20px;
+      width: 10%;
+}
+      /* bouton commander partie main et dernière div*/
+main #explore1 .explore2 {
+      width: 200px;
+      height: 40px;
+      text-align: center;     
 
 }
+
+
 
 
 
@@ -160,7 +161,6 @@ article .menu_card {
       @media screen and (min-width:768px) {
             .title {
                   background-color: #fff;
-                  border-style: dashed;
                   border-bottom-right-radius: 20px;
                   border-bottom-left-radius: 20px;
             }            
@@ -173,9 +173,6 @@ article .menu_card {
                   width: 100%;
                   max-width: none;
                   background: linear-gradient(45deg, rgba(147,86,220,1) 40%, rgba(242,242,242,1) 60%);
-            }
-            article .menu_card {
-                  width: 500px;
             }
             main #explore1 {
                   background-color: $greybground;

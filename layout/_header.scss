@@ -6,23 +6,19 @@ header {
 }
 .h_nav {
       display: flex;
-      flex-direction: row-reverse;
       justify-content: center;
       align-items: center;
-      position: relative;
 }
+
 .logo {
       font-family: $font-fam_titles;
       display: flex;
       text-align: center;
-      justify-content: center;
-      align-content: center;
+      margin: 0 80px;
+
       
 }
 nav a {
       font-size: $ftsize+0.5em;
       color: #000;
-      position: absolute;
-      right: 240px;
-      top: 25px;
 }
