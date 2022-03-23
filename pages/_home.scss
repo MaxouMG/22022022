@@ -199,77 +199,48 @@ main section  {
       }
 }
 .icon-legend {
+      height: 90px;
       display: flex;
-      flex-direction: row-reverse;
       align-items: center;
-      justify-content: flex-end;
-      color:#000;
+      text-decoration: none;
+      color: #000;
+}
+.text {
+      padding-left: 10px;
+      width: 70%;
+      h3, p {
+            margin-top: 0;
+            margin-bottom: 0;
+            text-align: left;
+      }
+}
+.hearts {
+      font-size: 3*$ftsize;
       position: relative;
 }
-.heart-icon1, .heart-icon2 {
-      width: 50px;
-      height: 50px;
-      text-align: right;
+.far.fa-heart, .fas.fa-heart {
       position: absolute;
-      top: 25px;
-      right: 25px;
-      .far.fa-heart, .fas.fa-heart {
-            width: 43px;
-            height: 43px;
-            font-size: $ftsize+1.5em;
-      }
-      .far.fa-heart {
-            color: #000;
-      }
+      top: -25px;
+      right: -60px;
 }
-.heart-icon2 {
-      opacity: 0;
+.far.fa-heart {
+      opacity: 1;
       &:hover {
-            animation: scale-up-ver-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-            }
-}
-      @keyframes scale-up-ver-center {
-            0% {
-                  color: #FF79DA; 
-                  transform: scaleY(0.4);
-                  opacity: 0.4;
-
-            }
-            25% {
-                  color:#FF79DA;
-                  transform: scaleY(0.5);
-                  opacity: 0.6;
-            }
-            50% {
-                  color: #9356DC;
-                  transform: scaleY(0.7);
-                  opacity: 0.8;
-                  }
-            80% {
-                  color: #9356DC;
-                  transform: scaleY(1);
-                  opacity: 1; 
-            }
-            100% {
-                  color: #9356DC;
-                  transform: scaleY(1);
-                  opacity: 0;
-            }
+            opacity: 0;
       }
-
-.card_legend {
-            width: 65%;
-            h3, p {
-                  text-align: left;
-                  padding-left: 5%;
-            }
-            h3 {
-                  margin-bottom: 0;
-            }
-            p {
-                  margin-top: 0;
-            }
 }
+.fas.fa-heart {
+      opacity: 0;
+      background: linear-gradient(355deg, $primary 30%, $secondary 70%);
+      background-clip: text;
+      color: transparent;
+      &:hover {
+            transform: scale(1.1);
+            transition: 2s;
+            opacity: 1;
+      }
+}
+
                   /* encadré nouveau*/
 .menu_card{
       position: relative;

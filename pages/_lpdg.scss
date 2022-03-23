@@ -7,14 +7,14 @@
       margin: 0 auto;
       max-width: 1000px;
       @include frontiers;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
 
 }
                   /*première section avec h1 img et icone coeur*/
 
-.lpdgpage, .lpdgpage .title {
+.lpdgpage .title {
       justify-content: center;
       align-items: center;
       padding-bottom: 0;
@@ -108,7 +108,7 @@ article .menu_card {
       margin: 0 auto;
       background-color: #fff;
       display: flex;
-      flex-direction: row;
+      // flex-direction: row;
       margin-bottom: 30px;
 }
 .card_legend {
@@ -120,15 +120,33 @@ article .menu_card {
 .price {
       width: 30%;
       font-weight: bold;
-      p {
             display: flex;
             justify-content: center;
             align-items: flex-end;
             height: 50%;
-      }
-
 }
 
+.d1 {
+      display: flex;
+      align-items: center;
+      height: 70px;
+      border-radius: 20px;
+      box-shadow:3px 3px 10px #000 ;
+}
+.d2 {
+      flex-grow: 1;
+}
+.okay {
+      width: 0px;
+      height: 70px;
+      background-color: $tertiary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 20px;
+
+}
 
 
 
