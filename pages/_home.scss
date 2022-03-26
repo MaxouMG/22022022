@@ -157,32 +157,6 @@ main section  {
             text-align: left;
       }
 }
-.hearts {
-      font-size: 3*$ftsize;
-      position: relative;
-}
-.far.fa-heart, .fas.fa-heart {
-      position: absolute;
-      top: -25px;
-      right: -60px;
-}
-.far.fa-heart {
-      opacity: 1;
-      &:hover {
-            opacity: 0;
-      }
-}
-.fas.fa-heart {
-      opacity: 0;
-      background: linear-gradient(355deg, $primary 30%, $secondary 70%);
-      background-clip: text;
-      color: transparent;
-      &:hover {
-            transform: scale(1.1);
-            transition: 2s;
-            opacity: 1;
-      }
-}
 
                   /* encadré nouveau*/
 .menu_card{

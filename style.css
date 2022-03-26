@@ -216,6 +216,49 @@
   }
 }
 
+/*dans home.scss*/
+.hearts {
+  /* dans lpdg.scss*/
+}
+
+.hearts .far.fa-heart, .hearts .fas.fa-heart {
+  font-size: 3em;
+  position: absolute;
+  top: 180px;
+  right: 30px;
+}
+
+.hearts .far.fa-heart {
+  opacity: 1;
+}
+
+.hearts .far.fa-heart:hover {
+  opacity: 0;
+}
+
+.hearts .fas.fa-heart {
+  opacity: 0;
+  background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hearts .fas.fa-heart:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 2s;
+  transition: 2s;
+  opacity: 1;
+}
+
+.hearts .hearts2 i.far.fa-heart, .hearts .hearts2 i.fas.fa-heart {
+  font-size: 2em;
+  position: absolute;
+  top: 180px;
+  right: 30px;
+}
+
 /* en-tête de page*/
 header {
   margin: 0 auto;
@@ -643,40 +686,6 @@ main section {
   text-align: left;
 }
 
-.hearts {
-  font-size: 3em;
-  position: relative;
-}
-
-.far.fa-heart, .fas.fa-heart {
-  position: absolute;
-  top: -25px;
-  right: -60px;
-}
-
-.far.fa-heart {
-  opacity: 1;
-}
-
-.far.fa-heart:hover {
-  opacity: 0;
-}
-
-.fas.fa-heart {
-  opacity: 0;
-  background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
-  background-clip: text;
-  color: transparent;
-}
-
-.fas.fa-heart:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: 2s;
-  transition: 2s;
-  opacity: 1;
-}
-
 /* encadré nouveau*/
 .menu_card {
   position: relative;
@@ -849,7 +858,6 @@ main section {
 }
 
 .hearts2 {
-  font-size: 1.5em;
   width: 50px;
   height: 50px;
   display: -webkit-box;

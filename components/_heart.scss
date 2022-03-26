@@ -1,25 +1,38 @@
-.hearts2 {
+/*dans home.scss*/
+.hearts {
       .far.fa-heart, .fas.fa-heart {
-            top: inherit;
-            right: inherit;
+            font-size: 3*$ftsize;
+            position: absolute;
+            top: 180px;
+            right: 30px;
       }
       .far.fa-heart {
             opacity: 1;
             &:hover {
-                  opacity: 0;
-            }
-      }
-      .fas.fa-heart {
             opacity: 0;
-            background: linear-gradient(355deg, $primary 30%, $secondary 70%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            &:hover {
-                  transform: scale(1.1);
-                  transition: 2s;
-                  opacity: 1;
-            }
       }
-      
+}
+.fas.fa-heart {
+      opacity: 0;
+      background: linear-gradient(355deg, $primary 30%, $secondary 70%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      &:hover {
+            transform: scale(1.1);
+            transition: 2s;
+            opacity: 1;
+      }
+}
+
+/* dans lpdg.scss*/
+
+.hearts2 {
+      .far.fa-heart, .fas.fa-heart {
+            font-size: 2em;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+
+      }
 }
