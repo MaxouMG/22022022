@@ -46,28 +46,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      .far.fa-heart, .fas.fa-heart {
-            top: inherit;
-            right: inherit;
-      }
-      .far.fa-heart {
-            opacity: 1;
-            &:hover {
-                  opacity: 0;
-            }
-      }
-      .fas.fa-heart {
-            opacity: 0;
-            background: linear-gradient(355deg, $primary 30%, $secondary 70%);
-            -webkit-background-clip: text;
-            color: transparent;
-            &:hover {
-                  transform: scale(1.1);
-                  transition: 2s;
-                  opacity: 1;
-            }
-      }
-      
 }
       /*partie main puis article avec starters ... */
 
@@ -103,10 +81,12 @@ article {
       height: 80px;
       max-width: 500px;
       background-color: #fff;
+      overflow: hidden;
       display: flex;
       justify-content: space-around;
       align-items: center;
       margin: 25px 0;
+      position: relative;
 }
 .card_legend {
       width: 70%;
@@ -119,7 +99,7 @@ article {
       }
 }
 .price {
-      width: 25%;
+      width: 20%;
       font-weight: bold;
       display: flex;
       justify-content: center;
@@ -127,21 +107,23 @@ article {
       height: 50%;
 }
 .okay {
-      width: 25%;
-      height: 100%;
-      display: none;
-      font-size: 1.5*$ftsize;
-      color: #fff;
+      width: 55px;
+      height: 81px;
       background-color: $tertiary;
       border-top-right-radius: 30px;
       border-bottom-right-radius: 30px;
+      display: flex;
       justify-content: center;
       align-items: center;
       position: absolute;
-      right: -25px;
+      right: -55px;
+      
 }
-
-
+.fas.fa-check-circle {
+      font-size: 1.5*$ftsize;
+      color: #fff;
+      background-color: $tertiary;
+}
       /* bouton commander partie main et dernière div*/
 main #explore1 .explore2 {
       width: 200px;

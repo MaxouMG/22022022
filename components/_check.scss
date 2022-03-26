@@ -1,5 +1,3 @@
-
-      /* Animation*/
 .card:hover {
       .card_legend {
             width: 60%;
@@ -8,20 +6,22 @@
             transform: translateX(-50px);
       }
       .okay {
-            display: inherit;
-            animation: transrotate 500ms 1 ease-in;
+            transform: translate(-54px);
+            .fas.fa-check-circle {
+                  animation: rotate 500ms 1 ease-in;
             }
       }
+}
 
-      @keyframes transrotate {
+      @keyframes rotate {
                   0% {
-                        transform: translateX(-10px) rotateZ(0deg);
+                        transform: rotateZ(0deg);
                   }
                   50% {
-                        transform: translateX(-25px) rotateZ(-180deg);                        
+                        transform: rotateZ(-180deg);                        
                   }
                   100% {
-                        transform: translateX(-25px) rotateZ(-360deg);
+                        transform: rotateZ(-360deg);
                   }
             }
 

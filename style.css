@@ -19,7 +19,6 @@
           box-shadow: 15px 10px 10px #708090;
 }
 
-/* loading spinner*/
 .homepage {
   -webkit-animation: opening 3s linear;
           animation: opening 3s linear;
@@ -168,7 +167,6 @@
   margin-bottom: 100px;
 }
 
-/* Animation*/
 .card:hover .card_legend {
   width: 60%;
 }
@@ -179,38 +177,42 @@
 }
 
 .card:hover .okay {
-  display: inherit;
-  -webkit-animation: transrotate 500ms 1 ease-in;
-          animation: transrotate 500ms 1 ease-in;
+  -webkit-transform: translate(-54px);
+          transform: translate(-54px);
 }
 
-@-webkit-keyframes transrotate {
+.card:hover .okay .fas.fa-check-circle {
+  -webkit-animation: rotate 500ms 1 ease-in;
+          animation: rotate 500ms 1 ease-in;
+}
+
+@-webkit-keyframes rotate {
   0% {
-    -webkit-transform: translateX(-10px) rotateZ(0deg);
-            transform: translateX(-10px) rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
   }
   50% {
-    -webkit-transform: translateX(-25px) rotateZ(-180deg);
-            transform: translateX(-25px) rotateZ(-180deg);
+    -webkit-transform: rotateZ(-180deg);
+            transform: rotateZ(-180deg);
   }
   100% {
-    -webkit-transform: translateX(-25px) rotateZ(-360deg);
-            transform: translateX(-25px) rotateZ(-360deg);
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
   }
 }
 
-@keyframes transrotate {
+@keyframes rotate {
   0% {
-    -webkit-transform: translateX(-10px) rotateZ(0deg);
-            transform: translateX(-10px) rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
   }
   50% {
-    -webkit-transform: translateX(-25px) rotateZ(-180deg);
-            transform: translateX(-25px) rotateZ(-180deg);
+    -webkit-transform: rotateZ(-180deg);
+            transform: rotateZ(-180deg);
   }
   100% {
-    -webkit-transform: translateX(-25px) rotateZ(-360deg);
-            transform: translateX(-25px) rotateZ(-360deg);
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
   }
 }
 
@@ -861,34 +863,6 @@ main section {
           align-items: center;
 }
 
-.hearts2 .far.fa-heart, .hearts2 .fas.fa-heart {
-  top: inherit;
-  right: inherit;
-}
-
-.hearts2 .far.fa-heart {
-  opacity: 1;
-}
-
-.hearts2 .far.fa-heart:hover {
-  opacity: 0;
-}
-
-.hearts2 .fas.fa-heart {
-  opacity: 0;
-  background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.hearts2 .fas.fa-heart:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: 2s;
-  transition: 2s;
-  opacity: 1;
-}
-
 /*partie main puis article avec starters ... */
 .lpdgpage main {
   width: 100%;
@@ -934,6 +908,7 @@ article {
   height: 80px;
   max-width: 500px;
   background-color: #fff;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -943,6 +918,7 @@ article {
       -ms-flex-align: center;
           align-items: center;
   margin: 25px 0;
+  position: relative;
 }
 
 .card_legend {
@@ -958,7 +934,7 @@ article {
 }
 
 .price {
-  width: 25%;
+  width: 20%;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -973,14 +949,14 @@ article {
 }
 
 .okay {
-  width: 25%;
-  height: 100%;
-  display: none;
-  font-size: 1.5em;
-  color: #fff;
+  width: 55px;
+  height: 81px;
   background-color: #99E2D0;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -988,7 +964,13 @@ article {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  right: -25px;
+  right: -55px;
+}
+
+.fas.fa-check-circle {
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #99E2D0;
 }
 
 /* bouton commander partie main et dernière div*/
