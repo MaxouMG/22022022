@@ -1,62 +1,6 @@
 
                         /*Page d'accueil  hors en tête*/
                         /* mobile first*/
-      /* loading spinner*/
-.homepage {
-      animation: opening 3s linear;
-      opacity: 1;
-}
-      @keyframes opening {
-            0% {
-                  opacity: 0.2;
-            }
-            50% {
-                  opacity: 0.3;
-            }
-            100% {
-                  opacity: 1;
-            }
-      }
-
-.loading{
-      height: 100%;
-      width: 100%;
-      margin: auto;
-}
-.spinner {
-      margin: auto;
-      border: 15px solid $greyaround;
-      width: 150px;
-      height: 150px;      
-      border-top-color: $primary;
-      border-bottom-color: $primary;
-      border-left-color: $secondary;
-      border-right-color: $secondary;
-      border-radius: 50%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      animation: wait 3s linear;
-      opacity: 0;
-      z-index: 2;
-}
-      @keyframes wait {
-            0% {
-                  transform: scale(1) rotate(0);
-                  opacity: 1;
-            }
-            50% {
-                  transform: scale(1.5) rotate(180deg);
-                  opacity: 1;
-            }
-            100% {
-                  transform: scale(1) rotate(360deg);
-                  opacity: 0;
-            }
-      }     
-
                   /*première section - réserver le menu*/
       /*mise en page générale*/
 

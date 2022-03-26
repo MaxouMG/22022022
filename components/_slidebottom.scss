@@ -1,0 +1,28 @@
+
+      .starters {
+            animation: slide-bottom 2s linear 1s both;
+            opacity: 1;
+      }
+      @keyframes slide-bottom {
+            0% {
+                  transform: translateY(0);
+                  opacity: 0;
+            }
+            50% {
+                  transform: translateY(25px);
+                  opacity: 0.5;
+            }
+            100% {
+                  transform: translateY(50px);
+                  opacity: 1;
+            }
+      }
+      .dishes {
+            animation: slide-bottom 2s linear 3s both;
+            opacity: 1;
+      }
+      .desserts {
+            animation: slide-bottom 2s linear 5s both;
+            opacity: 1;
+            margin-bottom: 100px;
+      }

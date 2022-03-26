@@ -69,7 +69,6 @@
       }
       
 }
-
       /*partie main puis article avec starters ... */
 
 .lpdgpage main {
@@ -80,34 +79,6 @@
       justify-content: center;
       align-items: center;
 }
-.starters {
-      animation: slide-bottom 1s linear 500ms both;
-      opacity: 1;
-}
-@keyframes slide-bottom {
-      0% {
-            transform: translateY(0);
-            opacity: 0;
-      }
-      50% {
-            transform: translateY(25px);
-            opacity: 0.5;
-      }
-      100% {
-            transform: translateY(50px);
-            opacity: 1;
-      }
-}
-.dishes {
-      animation: slide-bottom 1s linear 1s both;
-      opacity: 1;
-}
-.desserts {
-      animation: slide-bottom 1s linear 1500ms both;
-      opacity: 1;
-      margin-bottom: 100px;
-}
-   
 h4 {
       text-transform: uppercase;
       text-align: start;
@@ -121,8 +92,7 @@ h4 {
       width: 35px;
       margin-top: 5px;
       margin-bottom: 15px;
-      margin-left: 25px;
-
+      margin-left: 25px;      
 }
 article {
       width: 350px;
@@ -139,23 +109,39 @@ article {
       margin: 25px 0;
 }
 .card_legend {
-      width: 80%;
+      width: 70%;
       h3, p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             margin: 0;
             padding-left: 15px;
       }
 }
 .price {
-      width: 10%;
+      width: 25%;
       font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 50%;
 }
 .okay {
-      width: 10%;
+      width: 25%;
+      height: 100%;
+      display: none;
+      font-size: 1.5*$ftsize;
+      color: #fff;
+      background-color: $tertiary;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: -25px;
 }
+
+
       /* bouton commander partie main et dernière div*/
 main #explore1 .explore2 {
       width: 200px;
@@ -189,15 +175,13 @@ main #explore1 .explore2 {
             .lpdgpage main {
                   width: 100%;
                   max-width: none;
-                  background: linear-gradient(45deg, rgba(147,86,220,1) 40%, rgba(242,242,242,1) 60%);
+                  background: linear-gradient(45deg,rgba(242,242,242,1) 20%, rgba(147,86,220,1) 60%, rgba(242,242,242,1) 20%);
             }
             main #explore1 {
-                  background-color: $greybground;
                   border-bottom-right-radius: 20px;
                   border-bottom-left-radius: 20px;
                   margin-bottom: 5px;
                   margin-left: 5px;
                   margin-right: 5px;
             }
-
       }

@@ -1,0 +1,27 @@
+
+      /* Animation*/
+.card:hover {
+      .card_legend {
+            width: 60%;
+      }
+      .price {
+            transform: translateX(-50px);
+      }
+      .okay {
+            display: inherit;
+            animation: transrotate 500ms 1 ease-in;
+            }
+      }
+
+      @keyframes transrotate {
+                  0% {
+                        transform: translateX(-10px) rotateZ(0deg);
+                  }
+                  50% {
+                        transform: translateX(-25px) rotateZ(-180deg);                        
+                  }
+                  100% {
+                        transform: translateX(-25px) rotateZ(-360deg);
+                  }
+            }
+
