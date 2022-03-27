@@ -217,26 +217,22 @@
 }
 
 /*dans home.scss*/
-.hearts {
-  /* dans lpdg.scss*/
-}
-
-.hearts .far.fa-heart, .hearts .fas.fa-heart {
+.homepage .hearts .far.fa-heart, .homepage .hearts .fas.fa-heart {
   font-size: 3em;
   position: absolute;
   top: 180px;
   right: 30px;
 }
 
-.hearts .far.fa-heart {
+.far.fa-heart {
   opacity: 1;
 }
 
-.hearts .far.fa-heart:hover {
+.far.fa-heart:hover {
   opacity: 0;
 }
 
-.hearts .fas.fa-heart {
+.fas.fa-heart {
   opacity: 0;
   background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
   -webkit-background-clip: text;
@@ -244,7 +240,7 @@
   color: transparent;
 }
 
-.hearts .fas.fa-heart:hover {
+.fas.fa-heart:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: 2s;
@@ -252,11 +248,16 @@
   opacity: 1;
 }
 
-.hearts .hearts2 i.far.fa-heart, .hearts .hearts2 i.fas.fa-heart {
+/* dans lpdg.scss*/
+.lpdgpage .hearts2 {
+  position: relative;
+}
+
+.lpdgpage .hearts2 .far.fa-heart, .lpdgpage .hearts2 .fas.fa-heart {
   font-size: 2em;
   position: absolute;
-  top: 180px;
-  right: 30px;
+  top: -15px;
+  right: -10px;
 }
 
 /* en-tête de page*/
@@ -622,7 +623,8 @@ aside {
   padding-left: 5%;
 }
 
-/* partie main section avec cards et animation heart-icon*/
+/* partie main section avec cards et animation heart-icon
+                  heart dans _heart.scss*/
 main section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -743,6 +745,9 @@ main section {
     width: 100%;
     text-align: center;
   }
+  aside {
+    background: linear-gradient(45deg, #F2F2F2 30%, #9356DC, #FF79DA);
+  }
   .container_choice {
     width: inherit;
     max-width: none;
@@ -766,7 +771,7 @@ main section {
     margin-right: 20px;
     margin-left: 20px;
   }
-  /* partie main section avec cards et animation heart-icon*/
+  /* partie main section avec cards, la partie hearts est _heart.scss*/
   main section {
     max-width: none;
     -webkit-box-orient: horizontal;
@@ -809,7 +814,7 @@ main section {
 }
 
 /*partie "en-tête" nommée title avec l'équivalent h1 
-                  nommé text2, l'img et les coeurs */
+                  nommé text2, l'img - hearts2 dans _heart.scss */
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -855,20 +860,6 @@ main section {
   font-family: "Shrikhand", cursive;
   font-size: 1.5em;
   font-weight: bold;
-}
-
-.hearts2 {
-  width: 50px;
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 /*partie main puis article avec starters ... */
@@ -975,7 +966,7 @@ article {
   right: -55px;
 }
 
-.fas.fa-check-circle {
+.far.fa-check-circle, .fas.fa-check-circle {
   font-size: 1.5em;
   color: #fff;
   background-color: #99E2D0;
@@ -990,6 +981,7 @@ main #explore1 .explore2 {
 
 /*version tablette*/
 @media screen and (min-width: 768px) {
+  /*partie "en-tête" title, text2, l'img - hearts2 dans _heart.scss */
   .title {
     background-color: #fff;
     border-bottom-right-radius: 20px;
@@ -1000,11 +992,16 @@ main #explore1 .explore2 {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
   }
+  /*partie main puis article avec starters ... */
   .lpdgpage main {
     width: 100%;
     max-width: none;
-    background: linear-gradient(45deg, #f2f2f2 20%, #9356dc 60%, #f2f2f2 20%);
+    background: linear-gradient(45deg, #F2F2F2 30%, #9356DC, #FF79DA);
   }
+  .legend {
+    border-radius: 30px;
+  }
+  /* bouton commander partie main et dernière div*/
   main #explore1 {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;

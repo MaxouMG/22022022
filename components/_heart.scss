@@ -1,15 +1,18 @@
 /*dans home.scss*/
-.hearts {
-      .far.fa-heart, .fas.fa-heart {
-            font-size: 3*$ftsize;
-            position: absolute;
-            top: 180px;
-            right: 30px;
+.homepage {
+      .hearts {
+            .far.fa-heart, .fas.fa-heart {
+                  font-size: 3*$ftsize;
+                  position: absolute;
+                  top: 180px;
+                  right: 30px;
+            }
       }
-      .far.fa-heart {
-            opacity: 1;
-            &:hover {
-            opacity: 0;
+} 
+.far.fa-heart {
+      opacity: 1;
+      &:hover {
+      opacity: 0;           
       }
 }
 .fas.fa-heart {
@@ -26,13 +29,14 @@
 }
 
 /* dans lpdg.scss*/
-
-.hearts2 {
-      .far.fa-heart, .fas.fa-heart {
-            font-size: 2em;
-            position: absolute;
-            top: 30px;
-            right: 30px;
-
+.lpdgpage  {
+      .hearts2 {
+            position: relative;
+            .far.fa-heart, .fas.fa-heart {
+                  font-size: 2*$ftsize;
+                  position: absolute;
+                  top: -15px;
+                  right: -10px;
+            }
       }
 }

@@ -117,7 +117,8 @@ aside {
 .choose h3 {
       padding-left: 5%;
 }
-                  /* partie main section avec cards et animation heart-icon*/
+                  /* partie main section avec cards et animation heart-icon
+                  heart dans _heart.scss*/
 
 main section  {
       display: flex;
@@ -216,6 +217,9 @@ main section  {
                         text-align: center;
                   }
             }
+            aside {
+                  background: linear-gradient(45deg,$greybground 30%, $primary, $secondary);
+            }
             .container_choice{
                   width: inherit;
                   max-width: none;
@@ -232,7 +236,7 @@ main section  {
                   margin-left: 20px;
             }
             
-                  /* partie main section avec cards et animation heart-icon*/
+                  /* partie main section avec cards, la partie hearts est _heart.scss*/
             main section {
                   max-width: none;
                   flex-direction: row;
