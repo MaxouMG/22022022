@@ -249,11 +249,11 @@
 }
 
 /* dans lpdg.scss*/
-.lpdgpage .hearts2 {
+.lpdgpage .hearts2, .lnepage .hearts2 {
   position: relative;
 }
 
-.lpdgpage .hearts2 .far.fa-heart, .lpdgpage .hearts2 .fas.fa-heart {
+.lpdgpage .hearts2 .far.fa-heart, .lpdgpage .hearts2 .fas.fa-heart, .lnepage .hearts2 .far.fa-heart, .lnepage .hearts2 .fas.fa-heart {
   font-size: 2em;
   position: absolute;
   top: -15px;
@@ -807,7 +807,7 @@ main section {
 /*le palais du goût*/
 /*version mobile*/
 /* règle présentation générale */
-.lpdgpage {
+.lpdgpage, .lnepage {
   min-width: 350px;
   max-width: 1000px;
   margin: 0 auto;
@@ -863,7 +863,7 @@ main section {
 }
 
 /*partie main puis article avec starters ... */
-.lpdgpage main {
+.lpdgpage main, .lnepage main {
   width: 100%;
   background-color: #F2F2F2;
   display: -webkit-box;
@@ -993,7 +993,7 @@ main #explore1 .explore2 {
     border-top-left-radius: 20px;
   }
   /*partie main puis article avec starters ... */
-  .lpdgpage main {
+  .lpdgpage main, .lnepage main {
     width: 100%;
     max-width: none;
     background: linear-gradient(45deg, #F2F2F2 30%, #9356DC, #FF79DA);
