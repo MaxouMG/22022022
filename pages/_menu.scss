@@ -2,7 +2,7 @@
                   /*le palais du goût*/
       /*version mobile*/
                   /* règle présentation générale */
-.lpdgpage, .lnepage {
+.lpdgpage, .lnepage, .alfpage, .lddspage {
       min-width: 350px;
       max-width: 1000px;
       margin: 0 auto;
@@ -42,7 +42,7 @@
 
       /*partie main puis article avec starters ... */
 
-.lpdgpage main, .lnepage main {
+.lpdgpage main, .lnepage main, .alfpage main, .lddspage main {
       width: 100%;
       background-color: $greybground;
       display: flex;
@@ -149,7 +149,7 @@ main #explore1 .explore2 {
                   border-top-left-radius: 20px;
             }
       /*partie main puis article avec starters ... */
-            .lpdgpage main, .lnepage main {
+            .lpdgpage main, .lnepage main, .alfpage main, .lddspage main {
                   width: 100%;
                   max-width: none;
                   background: linear-gradient(45deg,$greybground 30%, $primary, $secondary);
