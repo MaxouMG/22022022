@@ -62,25 +62,19 @@ article {
 }
 .over {
       width: 100%;
-      display: flex;
-      align-items: flex-start;
       padding-left: 25px;
 }
 h4 {
       text-transform: uppercase;
-      display: flex;
-      align-items: flex-start;
-
       margin-top: 0;
       margin-bottom: 0;
 }
 .underline {
       border: 2px solid $tertiary;
       background-color: $tertiary;
-      width: 35px;
-      margin-top: 30px;
-      margin-bottom: 15px;
-      margin-left: -70px;   
+      width: 40px;
+      margin-top: 10px;
+      margin-bottom: 15px;  
 }
 .card {
       @extend .button;
@@ -96,8 +90,9 @@ h4 {
       position: relative;
 }
 .card_legend {
-      width: 70%;
+      width: 90%;
       h3, p {
+            width: 80%;
             text-align: left;
             white-space: nowrap;
             overflow: hidden;
@@ -124,8 +119,7 @@ h4 {
       justify-content: center;
       align-items: center;
       position: absolute;
-      right: -55px;
-      
+      right: -55px;      
 }
 .far.fa-check-circle, .fas.fa-check-circle {
       font-size: 1.5*$ftsize;
@@ -136,8 +130,7 @@ h4 {
 main #explore1 .explore2 {
       width: 200px;
       height: 40px;
-      text-align: center;     
-
+      text-align: center;
 }
 
 
@@ -168,6 +161,9 @@ main #explore1 .explore2 {
                   width: 100%;
                   max-width: none;
                   background: linear-gradient(45deg,$greybground 30%, $primary, $secondary);
+            }
+            .over {
+                  padding-left: 450px;
             }
             .legend {
                   border-radius: 30px;
