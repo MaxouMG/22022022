@@ -237,6 +237,7 @@
   background: linear-gradient(355deg, #9356DC 30%, #FF79DA 70%);
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
   color: transparent;
 }
 
@@ -902,7 +903,6 @@ article {
 }
 
 .over {
-  width: 100%;
   padding-left: 25px;
 }
 
@@ -1035,6 +1035,7 @@ main #explore1 .explore2 {
 
 /*mise en page générale*/
 body {
+  width: 100%;
   min-width: 350px;
   max-width: 1300px;
   margin: 0 auto;

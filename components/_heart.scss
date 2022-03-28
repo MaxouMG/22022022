@@ -17,9 +17,13 @@
 }
 .fas.fa-heart {
       opacity: 0;
+      background:-webkit-linear-gradient(355deg, $primary 30%, $secondary 70%);
       background: linear-gradient(355deg, $primary 30%, $secondary 70%);
       -webkit-background-clip: text;
       background-clip: text;
+      -webkit-text-fill-color: transparent;
+  
+      
       color: transparent;
       &:hover {
             transform: scale(1.1);
