@@ -1,5 +1,5 @@
       .starters {
-            animation: slide-bottom 2s linear 1s both;
+            animation: slide-bottom 200ms linear 1s both;
             opacity: 1;
       }
       @keyframes slide-bottom {
@@ -17,11 +17,10 @@
             }
       }
       .dishes {
-            animation: slide-bottom 2s linear 3s both;
+            animation: slide-bottom 600ms linear 1s both;
             opacity: 1;
       }
       .desserts {
-            animation: slide-bottom 2s linear 5s both;
+            animation: slide-bottom 1000ms linear 1s both;
             opacity: 1;
-            margin-bottom: 100px;
       }

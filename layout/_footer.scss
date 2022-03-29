@@ -76,30 +76,21 @@ footer {
                   justify-content: center;
                   align-items: center;
                   text-align: center;
-                  border: 2px dashed $greyaround;
             }            
             footer h1, .resume {
                   width: 350px;                              
-                  border-left: 2px dashed $greyaround;
-                  border-right: 2px dashed $greyaround;
                   justify-content: center;
                   padding-left: 15px;
                   padding-right: 15px;
-                  background-color: $greyaround;
-                  color:#343a40;
             }
             footer h1 {
                   border-top: 2px dashed $greyaround;
                   margin-bottom: 0;
-                  padding-top: 15px;
+                  padding-top: 25px;
             }
             .resume {
                   border-bottom: 2px dashed $greyaround;
-                  padding-bottom: 15px;
-            }
-            .inform {
-                  a {
-                        color: #343a40;
-                  }
+                  padding-bottom: 25px;
+            
             }
       }

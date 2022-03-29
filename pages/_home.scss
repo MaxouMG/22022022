@@ -22,6 +22,7 @@ section {
 #aroundme {
       width: 100%;
       background-color: $greyaround;
+      box-shadow: 0px 6px 7px -2px rgba(83,92,101,0.5) inset;
       padding-top: 10px;
       padding-bottom: 10px; 
       h2 {
@@ -112,6 +113,9 @@ aside {
       text-align: right;
       &:hover{
             color: $primary;
+            .picture {
+                  color: $primary;
+            }
       }
 }
 .choose h3 {
@@ -197,7 +201,7 @@ main section  {
                   justify-content: center;
                   align-items: center;  
                   text-align: center;
-                  background-color: $greybground;
+                  background-color: inherit;
                   padding-bottom: 5px;
             }           
             .reserve {
@@ -207,8 +211,7 @@ main section  {
                   border-bottom-left-radius: 20px;
             }      
             #aroundme, #explore1 {
-                  border-top-right-radius: 20px;
-                  border-top-left-radius: 20px;
+                  border-radius: 30px;
             }
                   /*Partie main, sous-partie aside le H2 en .borders et l'ensemble container_choice*/
             aside, section {
@@ -216,9 +219,6 @@ main section  {
                         width: 100%;
                         text-align: center;
                   }
-            }
-            aside {
-                  background: linear-gradient(45deg,$greybground 30%, $primary, $secondary);
             }
             .container_choice{
                   width: inherit;
@@ -261,10 +261,6 @@ main section  {
 
                   /* version desktop*/            
             @media screen and (min-width: 992px) {
-                  aside {
-                        border-left: 2px dashed $greyaround;
-                        border-right: 2px dashed $greyaround;
-                  }
                   .container_choice {
                         max-width: 1000px;
                   }

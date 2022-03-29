@@ -2,9 +2,9 @@
 .homepage {
       .hearts {
             .far.fa-heart, .fas.fa-heart {
-                  font-size: 3*$ftsize;
+                  font-size: 2*$ftsize;
                   position: absolute;
-                  top: 180px;
+                  top: 190px;
                   right: 30px;
             }
       }
@@ -17,11 +17,10 @@
 }
 .fas.fa-heart {
       opacity: 0;
-      background:-webkit-linear-gradient(355deg, $primary 30%, $secondary 70%);
       background: linear-gradient(355deg, $primary 30%, $secondary 70%);
       -webkit-background-clip: text;
       background-clip: text;
-      -webkit-text-fill-color: transparent;
+
   
       
       color: transparent;
