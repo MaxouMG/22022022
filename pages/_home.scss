@@ -1,9 +1,8 @@
 
                         /*Page d'accueil  hors en tête*/
-                        /* mobile first*/
+                  /* mobile first*/
                   /*première section - réserver le menu*/
       /*mise en page générale*/
-
 .homepage {
       margin: 0 auto;
 }
@@ -15,7 +14,8 @@ section {
       background-color: $greybground;
 }
 .reserve {
-      @include frontiers;   
+      @include frontiers;
+      text-align: center; 
       background-color: $greybground;
       flex-direction: column;
 }
@@ -57,7 +57,7 @@ section {
             margin-bottom: 25px;
       }
 }
-                 /*Partie main, sous-partie aside le H2 en .borders et l'ensemble container_choice*/
+      /*Partie main, sous-partie aside le H2 en .borders et l'ensemble container_choice*/
 
 aside {
       background-color: #fff;
@@ -85,9 +85,11 @@ aside {
       background: $greybground;
       margin-bottom: 30px;
       position: relative;
-      left: 10px;
       &:hover{
             background-color: lighten($primary,30%);
+            .picture {
+                  color: $primary;
+            }
       }
       @media screen and (min-width: 415px) {
             width: 350px;          
@@ -111,24 +113,12 @@ aside {
       width: 15%;
       font-size: $ftsize;
       text-align: right;
-      &:hover{
-            color: $primary;
-            .picture {
-                  color: $primary;
-            }
-      }
 }
 .choose h3 {
       padding-left: 5%;
 }
-                  /* partie main section avec cards et animation heart-icon
-                  heart dans _heart.scss*/
-
-main section  {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-} 
+      /* partie main section avec cards 
+      et animation heart-icon heart dans _heart.scss*/
 .menu_card {  
       @include frontiers; 
       @extend .button;
@@ -163,7 +153,7 @@ main section  {
       }
 }
 
-                  /* encadré nouveau*/
+      /* encadré nouveau*/
 .menu_card{
       position: relative;
       .new {
@@ -192,10 +182,9 @@ main section  {
 
 
 
-
-            /*version tablette*/
+                  /*version tablette*/
       @media screen and (min-width:768px) {
-                  /* première section avec reserve #aroundme et explore */
+      /* première section avec reserve #aroundme et explore */
             section {
                   display: flex;
                   justify-content: center;
@@ -213,7 +202,8 @@ main section  {
             #aroundme, #explore1 {
                   border-radius: 30px;
             }
-                  /*Partie main, sous-partie aside le H2 en .borders et l'ensemble container_choice*/
+      /*Partie main, sous-partie aside le H2 en .borders
+      et l'ensemble container_choice*/
             aside, section {
                   .borders {
                         width: 100%;
@@ -234,9 +224,8 @@ main section  {
                   padding-left: 0px;
                   margin-right: 20px;
                   margin-left: 20px;
-            }
-            
-                  /* partie main section avec cards, la partie hearts est _heart.scss*/
+            }            
+      /* partie main section avec cards, la partie hearts est _heart.scss*/
             main section {
                   max-width: none;
                   flex-direction: row;

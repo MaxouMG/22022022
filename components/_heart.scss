@@ -19,10 +19,7 @@
       opacity: 0;
       background: linear-gradient(355deg, $primary 30%, $secondary 70%);
       -webkit-background-clip: text;
-      background-clip: text;
-
-  
-      
+      background-clip: text;      
       color: transparent;
       &:hover {
             transform: scale(1.1);
