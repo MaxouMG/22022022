@@ -16,13 +16,13 @@
 
       @keyframes rotate {
                   0% {
-                        transform: rotateZ(0deg);
+                        transform: rotate(0deg);
                   }
                   50% {
-                        transform: rotateZ(-180deg);                        
+                        transform: rotate(-180deg);                        
                   }
                   100% {
-                        transform: rotateZ(-360deg);
+                        transform: rotate(-360deg);
                   }
             }
 
